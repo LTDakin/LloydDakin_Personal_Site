@@ -1,8 +1,11 @@
 import React from 'react'
+import Hero from '../components/Hero'
 
 function ContactPage(props){
     return(
-        <p>Contact works!</p>
+        <Hero title={props.title} subtitle={props.subtitle}>
+
+        </Hero>
     )
 }
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { Container, Navbar, Nav } from 'react-bootstrap'
+
+
 import './App.css';
 
 import Footer from './components/Footer'
@@ -19,9 +21,9 @@ class App extends React.Component {
         { title: 'Contact', path: '/Contact' },
       ],
       home: {
-        title: 'Observe, Internalize, Explore',
-        subtitle: 'Learn first, remember the key ideas, take those ideas and create new things',
-        subtitle2: 'Check out my projects below'
+        title: 'Hi I\'m Lloyd',
+        subtitle: 'Welcome to my Portfolio',
+        subtitle2: 'Let me introduce myself'
       },
       about: {
         title: 'About Me',
@@ -38,14 +40,14 @@ class App extends React.Component {
     return (
       <Router>
         <Container className='p-0' fluid={true}>
-          <Navbar bg='transparent' expand='lg'>
-            <Navbar.Brand>Lloyd Dakin</Navbar.Brand>
-            <Navbar.Toggle className='border-0' aria-controls='navbar-toggle' />
+          <Navbar style={{backgroundColor: "orange"}} className='Nav' expand='lg'>
+            <Navbar.Brand style={{color: "white"}}>Lloyd Dakin</Navbar.Brand>
+            <Navbar.Toggle style={{color: "white"}} className='border-0' aria-controls='navbar-toggle' />
             <Navbar.Collapse id='navbar-toggle'>
               <Nav className='ml-auto'>
-                <Link className='nav-link' to='/'>Home</Link>
-                <Link className='nav-link' to='/about'>About</Link>
-                <Link className='nav-link' to='/contact'>Contact</Link>
+                <Link style={{color: "white"}} className='nav-link' to='/'>Home</Link>
+                <Link style={{color: "white"}} className='nav-link' to='/about'>About</Link>
+                <Link style={{color: "white"}} className='nav-link' to='/contact'>Contact</Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
