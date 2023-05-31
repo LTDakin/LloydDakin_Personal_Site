@@ -4,29 +4,33 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 function navbar() {
   return (
-    <Navbar
-      style={{
-        backgroundColor: "white",
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        alignItems: "stretch",
-        justifyContent: "space-between",
-      }}
-      className="Nav"
+    <Nav
+      fill
+      className="flex-column"
+      style={{ height: "100%", justifyContent: "center" }}
     >
-      <Nav className="flex-column">
-        <Link style={{ color: "black" }} className="nav-link" to="/projects">
-          Projects
-        </Link>
-        <Link style={{ color: "black" }} className="nav-link" to="/about">
-          About
-        </Link>
-        <Link style={{ color: "black" }} className="nav-link" to="/contact">
-          Contact
-        </Link>
-      </Nav>
-    </Navbar>
+      <Link
+        style={{ color: "black" }}
+        className="nav-link d-flex justify-content-center align-items-center"
+        to="/projects"
+      >
+        <h1>Projects</h1>
+      </Link>
+      <Link
+        style={{ color: "black" }}
+        className="nav-link d-flex justify-content-center align-items-center"
+        to="/about"
+      >
+        <h1>About</h1>
+      </Link>
+      <Link
+        style={{ color: "black" }}
+        className="nav-link d-flex justify-content-center align-items-center"
+        to="/contact"
+      >
+        <h1>Contact</h1>
+      </Link>
+    </Nav>
   );
 }
 

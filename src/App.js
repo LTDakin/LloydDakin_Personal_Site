@@ -11,8 +11,14 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 
 import forestImg from "./assets/images/forest.jpg";
+import githubIcon from "./assets/images/github.png";
+import linkedinIcon from "./assets/images/linkedIn.png";
+import instagramIcon from "./assets/images/instagram.png";
 
 function App() {
+  // css variables
+  const iconSize = "40px";
+  // page code
   return (
     <Router>
       <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
@@ -30,7 +36,28 @@ function App() {
             fluid
             style={{ paddingLeft: 0, paddingRight: 0 }}
           >
-            <Hero title={"Lloyd Dakin"} subtitle={"Software Developer"} />
+            <Container>
+              <Row>
+                <Hero title={"Lloyd Dakin"} subtitle={"Software Developer"} />
+              </Row>
+              <Row id="socials-row">
+                <img
+                  src={githubIcon}
+                  alt="github icon"
+                  style={{ height: iconSize, marginLeft: "20px" }}
+                />
+                <img
+                  src={linkedinIcon}
+                  alt="linkedin icon"
+                  style={{ height: iconSize, marginLeft: "20px" }}
+                />
+                <img
+                  src={instagramIcon}
+                  alt="instagram icon"
+                  style={{ height: iconSize, marginLeft: "20px" }}
+                />
+              </Row>
+            </Container>
           </Col>
           <Col
             className="align-items-center d-flex"
@@ -48,10 +75,16 @@ function App() {
             style={{ paddingLeft: 0, paddingRight: 0 }}
             xl={6}
           >
-            <Route path="/" exact render={() => <TempNavBar />} />
-            <Route path="/projects" exact render={() => <HomePage />} />
-            <Route path="/about" exact render={() => <AboutPage />} />
-            <Route path="/contact" exact render={() => <ContactPage />} />
+            <Container
+              id="content-container"
+              fluid
+              style={{ paddingLeft: 0, paddingRight: 0, height: "100%" }}
+            >
+              <Route path="/" exact render={() => <TempNavBar />} />
+              <Route path="/projects" exact render={() => <HomePage />} />
+              <Route path="/about" exact render={() => <AboutPage />} />
+              <Route path="/contact" exact render={() => <ContactPage />} />
+            </Container>
           </Col>
         </Row>
       </Container>
