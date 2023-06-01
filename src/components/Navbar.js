@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
+
+import LargeButton from "../components/NavBigButton";
 
 function navbar() {
   return (
@@ -9,27 +10,9 @@ function navbar() {
       className="flex-column"
       style={{ height: "100%", justifyContent: "center" }}
     >
-      <Link
-        style={{ color: "black" }}
-        className="nav-link d-flex justify-content-center align-items-center"
-        to="/projects"
-      >
-        <h1>Projects</h1>
-      </Link>
-      <Link
-        style={{ color: "black" }}
-        className="nav-link d-flex justify-content-center align-items-center"
-        to="/about"
-      >
-        <h1>About</h1>
-      </Link>
-      <Link
-        style={{ color: "black" }}
-        className="nav-link d-flex justify-content-center align-items-center"
-        to="/contact"
-      >
-        <h1>Contact</h1>
-      </Link>
+      <LargeButton path={"/projects"} buttonText={"Projects"} />
+      <LargeButton path={"/about"} buttonText={"About"} />
+      <LargeButton path={"/contact"} buttonText={"Contact"} />
     </Nav>
   );
 }

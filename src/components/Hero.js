@@ -6,7 +6,12 @@ function Hero(props) {
     <div className="Hero">
       <Container>
         {props.title && (
-          <h1 className="display-1 font-weight-bolder">{props.title}</h1>
+          <h1
+            className="display-1 font-weight-bolder"
+            style={{ fontSize: "150px", fontFamily: "lemonmilk" }}
+          >
+            {props.title}
+          </h1>
         )}
         {props.subtitle && (
           <h3 className="display-7 font-weight-light">{props.subtitle}</h3>
