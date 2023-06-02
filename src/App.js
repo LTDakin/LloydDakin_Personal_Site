@@ -34,7 +34,7 @@ function App() {
         <Col
           className="align-items-center d-flex"
           fluid
-          style={{ paddingLeft: 0, paddingRight: 0 }}
+          style={{ paddingLeft: 20, paddingRight: 10, paddingBottom: 10 }}
         >
           <Container>
             <Row>
