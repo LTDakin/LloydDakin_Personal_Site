@@ -1,3 +1,4 @@
+/* Big Nav Link  CSS Styles */
 .big-nav-link {
   padding: 0;
   color: black;
@@ -26,4 +27,11 @@
 
 .big-nav-link:hover:after {
   width: 5%;
+}
+
+/* Back Button  CSS Styles */
+.back-button {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }

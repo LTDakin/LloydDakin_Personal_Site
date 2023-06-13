@@ -4,12 +4,14 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import "./App.css";
 
+// Component imports
 import PageNavBar from "./components/Navbar";
 import Hero from "./components/Hero";
-import HomePage from "./pages/HomePage";
+import ProjectPage from "./pages/ProjectPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 
+// Image imports
 import forestImg from "./assets/images/forest.jpg";
 import githubIcon from "./assets/images/github.png";
 import linkedinIcon from "./assets/images/linkedIn.png";
@@ -32,6 +34,7 @@ function App() {
           position: "absolute",
           width: "100%",
           height: "100%",
+          margin: 0,
         }}
       >
         {/* Title, social icons column */}
@@ -81,7 +84,11 @@ function App() {
           <img
             src={forestImg}
             alt={"forest"}
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
           />
         </Col>
         {/* Page Navigation column */}
@@ -98,7 +105,7 @@ function App() {
           >
             <Router>
               <Route path="/" exact render={() => <PageNavBar />} />
-              <Route path="/projects" exact render={() => <HomePage />} />
+              <Route path="/projects" exact render={() => <ProjectPage />} />
               <Route path="/about" exact render={() => <AboutPage />} />
               <Route path="/contact" exact render={() => <ContactPage />} />
             </Router>

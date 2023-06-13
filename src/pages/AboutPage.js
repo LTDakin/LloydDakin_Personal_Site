@@ -1,14 +1,17 @@
 import React from "react";
 import Hero from "../components/Hero";
+import BackButton from "../components/BackButton";
 
 import { Container } from "react-bootstrap";
 
 function AboutPage(props) {
-  const heroTitle = "About Me";
-  const heroSubTitle = "My skills and journey to becoming a software developer";
+  const heroSubTitle = "My journey to becoming a software developer";
   return (
-    <div>
-      <Hero title={heroTitle} subtitle={heroSubTitle}></Hero>
+    <div
+      className="about-page-div"
+      style={{ height: "100%", position: "relative" }}
+    >
+      <Hero subtitle={heroSubTitle}></Hero>
       <Container>
         <p>
           My journey as a Software Developer started at Tech Core, where I built
@@ -37,6 +40,7 @@ function AboutPage(props) {
           HTML, CSS, MongoDB, and SQL.
         </p>
       </Container>
+      <BackButton />
     </div>
   );
 }
