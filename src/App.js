@@ -41,21 +41,39 @@ function App() {
               <Hero title={"Lloyd Dakin"} subtitle={"Software Developer"} />
             </Row>
             <Row id="socials-row">
-              <img
-                src={githubIcon}
-                alt="github icon"
-                style={{ height: iconSize, marginLeft: "20px" }}
-              />
-              <img
-                src={linkedinIcon}
-                alt="linkedin icon"
-                style={{ height: iconSize, marginLeft: "20px" }}
-              />
-              <img
-                src={instagramIcon}
-                alt="instagram icon"
-                style={{ height: iconSize, marginLeft: "20px" }}
-              />
+              <a
+                href="https://github.com/LTDakin?tab=repositories"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={githubIcon}
+                  alt="github icon"
+                  style={{ height: iconSize, marginLeft: "20px" }}
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/lloyd-dakin/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={linkedinIcon}
+                  alt="linkedin icon"
+                  style={{ height: iconSize, marginLeft: "20px" }}
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/hi_dakin/?hl=en"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={instagramIcon}
+                  alt="instagram icon"
+                  style={{ height: iconSize, marginLeft: "20px" }}
+                />
+              </a>
             </Row>
           </Container>
         </Col>
