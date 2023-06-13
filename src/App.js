@@ -53,14 +53,24 @@ function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={githubIcon} alt="github icon" style={iconStyle} />
+                <img
+                  className="social-icon"
+                  src={githubIcon}
+                  alt="github icon"
+                  style={iconStyle}
+                />
               </a>
               <a
                 href="https://www.linkedin.com/in/lloyd-dakin/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={linkedinIcon} alt="linkedin icon" style={iconStyle} />
+                <img
+                  className="social-icon"
+                  src={linkedinIcon}
+                  alt="linkedin icon"
+                  style={iconStyle}
+                />
               </a>
               <a
                 href="https://www.instagram.com/hi_dakin/?hl=en"
@@ -68,6 +78,7 @@ function App() {
                 rel="noreferrer"
               >
                 <img
+                  className="social-icon"
                   src={instagramIcon}
                   alt="instagram icon"
                   style={iconStyle}

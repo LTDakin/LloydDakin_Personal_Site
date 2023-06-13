@@ -18,3 +18,12 @@
   font-family: "bebas";
   src: local("BebasNeue-Regular"), url("./assets/fonts/BebasNeue-Regular.ttf");
 }
+
+/* Social Icons */
+.social-icon {
+  transition: 0.6s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
