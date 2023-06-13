@@ -1,3 +1,29 @@
 .big-nav-link {
   padding: 0;
+  color: black;
+  transition: 0.6s ease;
+}
+
+.big-nav-link span {
+  z-index: 2;
+}
+
+.big-nav-link:after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 70px;
+  background-image: url("../assets/images/right\ arrow.png");
+  filter: brightness(0) invert(1);
+  transition: all 0.6s;
+}
+
+.big-nav-link:hover {
+  color: rgb(255, 255, 255);
+  background-color: black;
+}
+
+.big-nav-link:hover:after {
+  width: 5%;
 }

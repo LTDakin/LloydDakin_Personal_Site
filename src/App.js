@@ -18,6 +18,10 @@ import instagramIcon from "./assets/images/instagram.png";
 function App() {
   // css variables
   const iconSize = "40px";
+  const iconStyle = {
+    height: iconSize,
+    marginLeft: "20px",
+  };
   // page code
   return (
     <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
@@ -46,22 +50,14 @@ function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img
-                  src={githubIcon}
-                  alt="github icon"
-                  style={{ height: iconSize, marginLeft: "20px" }}
-                />
+                <img src={githubIcon} alt="github icon" style={iconStyle} />
               </a>
               <a
                 href="https://www.linkedin.com/in/lloyd-dakin/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img
-                  src={linkedinIcon}
-                  alt="linkedin icon"
-                  style={{ height: iconSize, marginLeft: "20px" }}
-                />
+                <img src={linkedinIcon} alt="linkedin icon" style={iconStyle} />
               </a>
               <a
                 href="https://www.instagram.com/hi_dakin/?hl=en"
@@ -71,7 +67,7 @@ function App() {
                 <img
                   src={instagramIcon}
                   alt="instagram icon"
-                  style={{ height: iconSize, marginLeft: "20px" }}
+                  style={iconStyle}
                 />
               </a>
             </Row>
