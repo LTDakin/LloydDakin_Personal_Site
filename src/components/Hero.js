@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 function Hero(props) {
   return (
     <div className="Hero">
-      <Container>
+      <Container style={{ padding: 0, margin: 0 }}>
         {props.title && (
           <h1
             className="display-1 font-weight-bolder"

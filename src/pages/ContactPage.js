@@ -3,11 +3,10 @@ import Hero from "../components/Hero";
 import BackButton from "../components/BackButton";
 
 function ContactPage(props) {
-  const heroTitle = "Let's get in touch";
-  const heroSubTitle = "I'll get back to you as soon as I can";
+  const heroSubTitle = "Let's get in touch";
   return (
     <div>
-      <Hero title={heroTitle} subtitle={heroSubTitle}></Hero>
+      <Hero subtitle={heroSubTitle}></Hero>
       <BackButton />
     </div>
   );
