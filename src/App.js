@@ -112,7 +112,12 @@ function App() {
           <Container
             id="content-container"
             fluid
-            style={{ paddingLeft: 0, paddingRight: 0, height: "100%" }}
+            style={{
+              paddingLeft: 0,
+              paddingRight: 0,
+              height: "100%",
+              overflow: "auto",
+            }}
           >
             <Router>
               <Route path="/" exact render={() => <PageNavBar />} />
