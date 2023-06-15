@@ -45,7 +45,7 @@ function App() {
         >
           <Container>
             <Row>
-              <Hero title={"Lloyd Dakin"} subtitle={"Software Developer"} />
+              <Hero title={"Lloyd Dakin"} subtitle={"Software Engineer"} />
             </Row>
             <Row id="socials-row">
               <a

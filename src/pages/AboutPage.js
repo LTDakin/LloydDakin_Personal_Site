@@ -69,7 +69,7 @@ function AboutPage(props) {
             ]}
           />
           <JobDescription
-            title="Avanade - Full Stack Engineer"
+            title="Tech Core - Web Developer"
             tech={["Java Script", "HTML", "CSS", "SQL"]}
             points={[
               "● Developed web pages for company products that clients would view to increase product sales and interest in projects.",
