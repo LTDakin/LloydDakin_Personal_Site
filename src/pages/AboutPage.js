@@ -16,17 +16,8 @@ function AboutPage(props) {
               marginTop: "5%",
             }}
           >
-            Nice to meet you
+            Work Experience
           </h1>
-          <p>
-            If you're reading this then I would first like to thank you for
-            checking out my portfolio! It was fun to build and I had a lot of
-            trouble wrangling the css to be the way I liked it, but finally got
-            it to look like the minimal way I envisioned.
-          </p>
-          <p>
-            Below is my resume and you can download a pdf version of it here
-          </p>
         </div>
         <div className="work-experience-div">
           <JobDescription

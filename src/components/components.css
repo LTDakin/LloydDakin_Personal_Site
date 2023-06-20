@@ -31,7 +31,7 @@
 
 /* Back Button  Component */
 .back-button {
-  position: relative;
+  position: absolute;
   width: 100%;
   bottom: 0;
   box-shadow: 0px -15px 0px rgb(0, 0, 0) inset;
@@ -40,7 +40,8 @@
 /* JobDescription Component */
 .job-title {
   font-family: coolvetica;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .job-tech-item {
@@ -62,5 +63,6 @@
 }
 
 .job-point {
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 0px;
 }
