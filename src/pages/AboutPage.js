@@ -6,17 +6,14 @@ import ResumePdf from "../assets/Lloyd Dakin Resume.pdf";
 
 function AboutPage(props) {
   return (
-    <div
-      className="about-page-div"
-      style={{ height: "100%", position: "relative" }}
-    >
+    <div className="about-page-div">
       <Container>
         <div>
           <h1
             style={{
               fontFamily: "lemonmilk",
               fontSize: "4em",
-              marginTop: "10%",
+              marginTop: "5%",
             }}
           >
             Nice to meet you
