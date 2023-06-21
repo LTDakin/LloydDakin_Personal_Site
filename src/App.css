@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: "coolvetica\ rg";
-  src: local("coolvetica\ rg"), url("./assets/fonts/coolvetica\ rg.ttf");
+  font-family: "coolvetica";
+  src: local("coolvetica"), url("./assets/fonts/coolvetica.ttf");
 }
 
 @font-face {
