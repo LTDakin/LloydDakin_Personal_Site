@@ -5,8 +5,13 @@ function ProjectCard(props) {
     <div className="project-card-div">
       <h2 className="card-title">{props.cardTitle}</h2>
       <p className="card-description">{props.projectDescription}</p>
-      <a className="card-github-link" target="_blank" href={props.githubLink}>
-        <img className="card-github-icon" src={githubIcon}></img>
+      <a
+        className="card-github-link"
+        target="_blank"
+        rel="noreferrer"
+        href={props.githubLink}
+      >
+        <img className="card-github-icon" alt="github" src={githubIcon}></img>
         <p className="card-icon-text">View on Github</p>
       </a>
     </div>
