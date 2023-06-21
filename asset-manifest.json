@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/LloydDakin_Personal_Site/static/css/main.3458231d.css",
+    "main.css": "/LloydDakin_Personal_Site/static/css/main.2a680bf5.css",
     "main.js": "/LloydDakin_Personal_Site/static/js/main.27fa68e6.js",
     "static/js/377.112a9494.chunk.js": "/LloydDakin_Personal_Site/static/js/377.112a9494.chunk.js",
     "static/media/forest.jpg": "/LloydDakin_Personal_Site/static/media/forest.2c960f53e4513554b126.jpg",
-    "static/media/coolvetica rg.ttf": "/LloydDakin_Personal_Site/static/media/coolvetica rg.42f59941755a61fca2d0.ttf",
+    "static/media/coolvetica.ttf": "/LloydDakin_Personal_Site/static/media/coolvetica.42f59941755a61fca2d0.ttf",
     "static/media/Cocogoose Pro-trial.ttf": "/LloydDakin_Personal_Site/static/media/Cocogoose Pro-trial.fc4c5187ea318bde306b.ttf",
     "static/media/Lloyd Dakin Resume.pdf": "/LloydDakin_Personal_Site/static/media/Lloyd Dakin Resume.074b9beca280779fd036.pdf",
     "static/media/BebasNeue-Regular.ttf": "/LloydDakin_Personal_Site/static/media/BebasNeue-Regular.c501e16fa3f0781f9d73.ttf",
@@ -12,12 +12,12 @@
     "static/media/LEMONMILK-Regular.otf": "/LloydDakin_Personal_Site/static/media/LEMONMILK-Regular.55fc24317b9c2b507dd8.otf",
     "static/media/instagram.png": "/LloydDakin_Personal_Site/static/media/instagram.2ddfb59982483a684b49.png",
     "index.html": "/LloydDakin_Personal_Site/index.html",
-    "main.3458231d.css.map": "/LloydDakin_Personal_Site/static/css/main.3458231d.css.map",
+    "main.2a680bf5.css.map": "/LloydDakin_Personal_Site/static/css/main.2a680bf5.css.map",
     "main.27fa68e6.js.map": "/LloydDakin_Personal_Site/static/js/main.27fa68e6.js.map",
     "377.112a9494.chunk.js.map": "/LloydDakin_Personal_Site/static/js/377.112a9494.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3458231d.css",
+    "static/css/main.2a680bf5.css",
     "static/js/main.27fa68e6.js"
   ]
 }
