@@ -40,6 +40,7 @@ function ContactPage(props) {
               paddingBottom: "10px",
             }}
             src={emailIcon}
+            alt="emailIcon"
           ></img>
           Contact Me!
         </h1>

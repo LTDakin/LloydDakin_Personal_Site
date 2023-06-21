@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 
 import "./App.css";
@@ -119,11 +119,21 @@ function App() {
               overflow: "auto",
             }}
           >
-            <Router>
-              <Route path="/" exact render={() => <PageNavBar />} />
-              <Route path="/projects" exact render={() => <ProjectPage />} />
-              <Route path="/about" exact render={() => <AboutPage />} />
-              <Route path="/contact" exact render={() => <ContactPage />} />
+            <Router basename={process.env.PUBLIC_URL}>
+              <Switch>
+                <Route exact path="/">
+                  <PageNavBar />
+                </Route>
+                <Route path="/projects">
+                  <ProjectPage />
+                </Route>
+                <Route path="/about">
+                  <AboutPage />
+                </Route>
+                <Route path="/contact">
+                  <ContactPage />
+                </Route>
+              </Switch>
             </Router>
           </Container>
         </Col>
