@@ -122,3 +122,77 @@ textarea {
   color: black;
   background-color: white;
 }
+
+/* ProjectCardPage Component */
+.project-cards-div-container {
+  margin-left: 40px;
+}
+.project-cards-div {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  align-content: space-around;
+}
+
+/* ProjectCard Component */
+.project-card-div {
+  position: relative;
+  color: black;
+  background-color: white;
+  display: flexbox;
+  height: 370px;
+  width: 300px;
+  padding: 20px;
+  transition: 0.6s;
+  border: 5px solid black;
+  margin: 20px;
+}
+
+.project-card-div:hover {
+  color: white;
+  background-color: black;
+}
+
+.project-card-div:hover .card-github-icon {
+  filter: invert(1);
+}
+
+.card-title {
+  font-family: coolvetica;
+  font-size: 2em;
+}
+
+.card-description {
+  font-family: coolvetica;
+}
+
+.card-icon-text {
+  font-family: coolvetica;
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0px;
+  right: 40px;
+  transition: 0.6s ease-in-out;
+  filter: opacity(0);
+}
+
+.card-github-icon {
+  height: 40px;
+  filter: invert(0);
+  transition: 0.6s;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.card-github-icon:hover {
+  transform: scale(1.2);
+}
+
+.card-github-icon:hover ~ .card-icon-text {
+  right: 60px;
+  filter: opacity(1);
+}
