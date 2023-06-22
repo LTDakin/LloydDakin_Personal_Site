@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/LloydDakin_Personal_Site/static/css/main.2a680bf5.css",
-    "main.js": "/LloydDakin_Personal_Site/static/js/main.27fa68e6.js",
+    "main.js": "/LloydDakin_Personal_Site/static/js/main.2e60b376.js",
     "static/js/377.112a9494.chunk.js": "/LloydDakin_Personal_Site/static/js/377.112a9494.chunk.js",
     "static/media/forest.jpg": "/LloydDakin_Personal_Site/static/media/forest.2c960f53e4513554b126.jpg",
     "static/media/coolvetica.ttf": "/LloydDakin_Personal_Site/static/media/coolvetica.42f59941755a61fca2d0.ttf",
@@ -13,11 +13,11 @@
     "static/media/instagram.png": "/LloydDakin_Personal_Site/static/media/instagram.2ddfb59982483a684b49.png",
     "index.html": "/LloydDakin_Personal_Site/index.html",
     "main.2a680bf5.css.map": "/LloydDakin_Personal_Site/static/css/main.2a680bf5.css.map",
-    "main.27fa68e6.js.map": "/LloydDakin_Personal_Site/static/js/main.27fa68e6.js.map",
+    "main.2e60b376.js.map": "/LloydDakin_Personal_Site/static/js/main.2e60b376.js.map",
     "377.112a9494.chunk.js.map": "/LloydDakin_Personal_Site/static/js/377.112a9494.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2a680bf5.css",
-    "static/js/main.27fa68e6.js"
+    "static/js/main.2e60b376.js"
   ]
 }
