@@ -26,7 +26,7 @@ function App() {
   };
   // page code
   return (
-    <Container fluid style={{ paddingLeft: 0, paddingRight: 0 }}>
+    <div className="entire-page">
       <Row
         fluid
         style={{
@@ -137,7 +137,7 @@ function App() {
           </Container>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 }
 
