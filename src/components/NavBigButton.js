@@ -12,7 +12,7 @@ function navBigButton(props) {
       <div className="nav-link d-flex justify-content-center align-items-center">
         <h1
           className="big-nav-link-text"
-          style={{ fontSize: "7em", fontFamily: "coolvetica" }}
+          style={{ fontSize: "7rem", fontFamily: "coolvetica" }}
         >
           {props.buttonText}
         </h1>

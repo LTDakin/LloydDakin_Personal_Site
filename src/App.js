@@ -32,7 +32,6 @@ function App() {
         style={{
           backgroundColor: "white",
           position: "absolute",
-          width: "100%",
           height: "100%",
           margin: 0,
         }}
