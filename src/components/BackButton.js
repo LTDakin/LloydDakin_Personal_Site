@@ -1,14 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import backButtonImg from "../assets/images/backButton.png";
 
 function BackButton() {
   return (
-    <Link
-      className="nav-link d-flex  align-items-center big-nav-link back-button"
-      to={"/"}
-    >
-      <h1>Return</h1>
-    </Link>
+    <div className="backbutton">
+      <Link to={"/"}>
+        <img
+          className="back-button-img"
+          src={backButtonImg}
+          alt="back button"
+        ></img>
+        <p className="back-button-text">Return</p>
+      </Link>
+    </div>
   );
 }
 
