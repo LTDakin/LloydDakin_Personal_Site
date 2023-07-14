@@ -1,22 +1,23 @@
 import React from "react";
 import BackButton from "../components/BackButton";
 import JobDescription from "../components/JobDescription";
-import { Container } from "react-bootstrap";
 import ResumePdf from "../assets/Lloyd Dakin Resume.pdf";
 
 function AboutPage(props) {
   return (
     <div className="about-page-div">
-      <h1
-        style={{
-          fontFamily: "lemonmilk",
-          fontSize: "4rem",
-          marginTop: "5%",
-          padding: "10px",
-        }}
-      >
-        Work Experience
-      </h1>
+      <div className="page-header">
+        <h1
+          style={{
+            fontFamily: "lemonmilk",
+            fontSize: "4rem",
+            marginTop: "5%",
+          }}
+        >
+          Work Experience
+        </h1>
+        <BackButton />
+      </div>
       <div className="work-experience-div" style={{ padding: "30px" }}>
         <JobDescription
           title="Avanade - Full Stack Engineer"
@@ -64,7 +65,6 @@ function AboutPage(props) {
           ]}
         />
       </div>
-      <BackButton />
     </div>
   );
 }

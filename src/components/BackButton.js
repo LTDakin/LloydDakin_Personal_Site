@@ -11,7 +11,6 @@ function BackButton() {
           src={backButtonImg}
           alt="back button"
         ></img>
-        <p className="back-button-text">Return</p>
       </Link>
     </div>
   );

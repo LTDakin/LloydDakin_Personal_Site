@@ -30,7 +30,7 @@ function ContactPage(props) {
 
   return (
     <div className="contact-page-div">
-      <form className="email-form" ref={form} onSubmit={sendEmail}>
+      <div className="page-header">
         <h1 style={{ fontFamily: "coolvetica", fontSize: "4em" }}>
           <img
             style={{
@@ -44,6 +44,9 @@ function ContactPage(props) {
           ></img>
           Contact Me!
         </h1>
+        <BackButton />
+      </div>
+      <form className="email-form" ref={form} onSubmit={sendEmail}>
         <div>
           <label className="form-label">Name</label>
           <input className="form-input" type="text" name="user_name" />
@@ -67,7 +70,6 @@ function ContactPage(props) {
           />
         </div>
       </form>
-      <BackButton />
     </div>
   );
 }

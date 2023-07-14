@@ -5,11 +5,12 @@ import ProjectCard from "../components/ProjectCard";
 function ProjectPage(props) {
   return (
     <div className="project-page-div">
-      <h1
-        style={{ fontFamily: "coolvetica", fontSize: "4em", padding: "40px" }}
-      >
-        Some things I've built!
-      </h1>
+      <div className="page-header">
+        <h1 style={{ fontFamily: "coolvetica", fontSize: "4em" }}>
+          Some things I've built!
+        </h1>
+        <BackButton />
+      </div>
       <div className="project-cards-div-container">
         <div className="project-cards-div">
           <ProjectCard
@@ -39,8 +40,6 @@ function ProjectPage(props) {
           ></ProjectCard>
         </div>
       </div>
-
-      <BackButton />
     </div>
   );
 }
