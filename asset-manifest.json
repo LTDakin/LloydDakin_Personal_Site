@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/LloydDakin_Personal_Site/static/css/main.b6257009.css",
-    "main.js": "/LloydDakin_Personal_Site/static/js/main.72644833.js",
+    "main.css": "/LloydDakin_Personal_Site/static/css/main.6caf39ac.css",
+    "main.js": "/LloydDakin_Personal_Site/static/js/main.d717470a.js",
     "static/js/377.112a9494.chunk.js": "/LloydDakin_Personal_Site/static/js/377.112a9494.chunk.js",
     "static/media/forest.jpg": "/LloydDakin_Personal_Site/static/media/forest.2c960f53e4513554b126.jpg",
     "static/media/coolvetica.ttf": "/LloydDakin_Personal_Site/static/media/coolvetica.42f59941755a61fca2d0.ttf",
@@ -13,12 +13,12 @@
     "static/media/instagram.png": "/LloydDakin_Personal_Site/static/media/instagram.2ddfb59982483a684b49.png",
     "static/media/backButton.png": "/LloydDakin_Personal_Site/static/media/backButton.a4f93b7699d0970c6957.png",
     "index.html": "/LloydDakin_Personal_Site/index.html",
-    "main.b6257009.css.map": "/LloydDakin_Personal_Site/static/css/main.b6257009.css.map",
-    "main.72644833.js.map": "/LloydDakin_Personal_Site/static/js/main.72644833.js.map",
+    "main.6caf39ac.css.map": "/LloydDakin_Personal_Site/static/css/main.6caf39ac.css.map",
+    "main.d717470a.js.map": "/LloydDakin_Personal_Site/static/js/main.d717470a.js.map",
     "377.112a9494.chunk.js.map": "/LloydDakin_Personal_Site/static/js/377.112a9494.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6257009.css",
-    "static/js/main.72644833.js"
+    "static/css/main.6caf39ac.css",
+    "static/js/main.d717470a.js"
   ]
 }
