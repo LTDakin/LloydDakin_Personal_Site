@@ -12,7 +12,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 
 // Image imports
-import forestImg from "./assets/images/forest.jpg";
+import nasaImg from "./assets/images/nasa.jpg";
 import githubIcon from "./assets/images/github.png";
 import linkedinIcon from "./assets/images/linkedIn.png";
 import instagramIcon from "./assets/images/instagram.png";
@@ -92,7 +92,7 @@ function App() {
           style={{ paddingLeft: 0, paddingRight: 0 }}
         >
           <img
-            src={forestImg}
+            src={nasaImg}
             alt={"forest"}
             style={{
               width: "100%",

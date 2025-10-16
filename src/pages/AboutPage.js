@@ -1,7 +1,6 @@
 import React from "react";
 import BackButton from "../components/BackButton";
 import JobDescription from "../components/JobDescription";
-import ResumePdf from "../assets/Lloyd Dakin Resume.pdf";
 
 function AboutPage(props) {
   return (
@@ -19,6 +18,22 @@ function AboutPage(props) {
         <BackButton />
       </div>
       <div className="work-experience-div" style={{ padding: "30px" }}>
+        <JobDescription
+          title="Las Cumbres Observatory - Full Stack Engineer"
+          tech={[
+            "Vue.js",
+            "Django",
+            "Redis",
+            "JavaScript",
+            "Python",
+            "Nix.OS",
+          ]}
+          points={[
+            "● Architected and built Datalab, a web-based platform using Vue3 and Django, enabling users to execute scientific pipelines and process astronomical data.",
+            "● Optimized a webworker to do image scaling and multiple color channel stacking in real-time in the browser.",
+            "● Acted as a sole product owner, directly engaging with users to translate feedback into agile feature development and automated deployment with a CI/CD pipeline.",
+          ]}
+        />
         <JobDescription
           title="Avanade - Full Stack Engineer"
           tech={[
@@ -53,15 +68,6 @@ function AboutPage(props) {
             "● Developed an internal analytics tool using React, enabling the team to view ad campaign’s metrics, thus boosting productivity.",
             "● Developed search bar tooling with React Bootstrap to retrieve data from a lambda instance connected to an RDS database, saving ~1,800+ working hours per month by replacing manual querying of SQL database",
             "● Built multiple data analysis pages with Chart.js for detailed custom search queries, allowing team members to find specific sets and look at generated statistics including top/lowest performing ads",
-          ]}
-        />
-        <JobDescription
-          title="Tech Core - Web Developer"
-          tech={["Java Script", "HTML", "CSS", "SQL"]}
-          points={[
-            "● Developed web pages for company products that clients would view to increase product sales and interest in projects.",
-            "● Created UI menus for selecting different scenarios and settings using JavaScript for a Unity VR operating room.",
-            "● Debugged SQL database and removed bad data using a script that I developed and tested, which located bad data entries by checking strings with regex.",
           ]}
         />
       </div>

@@ -42,7 +42,7 @@ function ContactPage(props) {
             src={emailIcon}
             alt="emailIcon"
           ></img>
-          Contact Me!
+          Let's connect
         </h1>
         <BackButton />
       </div>

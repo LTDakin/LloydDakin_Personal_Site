@@ -7,7 +7,7 @@ function ProjectPage(props) {
     <div className="project-page-div">
       <div className="page-header">
         <h1 style={{ fontFamily: "coolvetica", fontSize: "4em" }}>
-          Some things I've built!
+          Projects
         </h1>
         <BackButton />
       </div>

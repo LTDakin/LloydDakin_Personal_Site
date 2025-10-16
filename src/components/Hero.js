@@ -8,7 +8,7 @@ function Hero(props) {
         {props.title && (
           <h1
             className="display-1 font-weight-bolder"
-            style={{ fontSize: "10rem", fontFamily: "lemonmilk" }}
+            style={{ fontSize: "8rem", fontFamily: "lemonmilk" }}
           >
             {props.title}
           </h1>
