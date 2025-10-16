@@ -9,3 +9,8 @@ git clone [repo link]
 npm install
 npm run start
 ```
+
+Pushes to main will start a react build and deploy to gh-pages
+```
+deploy static content to gh-pages
+```
