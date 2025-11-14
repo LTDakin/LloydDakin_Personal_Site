@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
 
-import LargeButton from "../components/NavBigButton";
+import TitleLink from "../components/TitleLink";
 
 function navbar() {
   return (
@@ -10,9 +10,9 @@ function navbar() {
       className="flex-column"
       style={{ height: "100%", justifyContent: "center" }}
     >
-      <LargeButton path={"/projects"} buttonText={"Projects"} />
-      <LargeButton path={"/about"} buttonText={"About"} />
-      <LargeButton path={"/contact"} buttonText={"Contact"} />
+      <TitleLink path={"/projects"} buttonText={"Projects"} />
+      <TitleLink path={"/about"} buttonText={"About"} />
+      <TitleLink path={"/contact"} buttonText={"Contact"} />
     </Nav>
   );
 }

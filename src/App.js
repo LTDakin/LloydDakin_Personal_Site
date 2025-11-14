@@ -15,7 +15,6 @@ import ContactPage from "./pages/ContactPage";
 import nasaImg from "./assets/images/nasa.jpg";
 import githubIcon from "./assets/images/github.png";
 import linkedinIcon from "./assets/images/linkedIn.png";
-import instagramIcon from "./assets/images/instagram.png";
 
 function App() {
   // css variables
@@ -56,7 +55,7 @@ function App() {
                   className="social-icon"
                   src={githubIcon}
                   alt="github icon"
-                  style={iconStyle}
+                  style={{ height: iconSize, }}
                 />
               </a>
               <a
@@ -68,18 +67,6 @@ function App() {
                   className="social-icon"
                   src={linkedinIcon}
                   alt="linkedin icon"
-                  style={iconStyle}
-                />
-              </a>
-              <a
-                href="https://www.instagram.com/hi_dakin/?hl=en"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  className="social-icon"
-                  src={instagramIcon}
-                  alt="instagram icon"
                   style={iconStyle}
                 />
               </a>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./components.css";
 
-function navBigButton(props) {
+function titleLink(props) {
   return (
     <Link
       className="nav-link d-flex justify-content-center align-items-center big-nav-link"
@@ -21,4 +21,4 @@ function navBigButton(props) {
   );
 }
 
-export default navBigButton;
+export default titleLink;
