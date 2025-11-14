@@ -59,7 +59,7 @@
 
 .job-tech-item {
   white-space: nowrap;
-  background-color: rgb(125, 189, 95);
+  background-color: rgb(95, 129, 189);
   color: white;
   margin-right: 10px;
   padding-top: 5px;
@@ -71,7 +71,7 @@
 }
 
 .job-tech-item:hover {
-  background-color: rgb(80, 121, 61);
+  background-color: rgb(59, 105, 185);
   transform: scale(1.2);
 }
 
