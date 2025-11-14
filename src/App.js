@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./App.css";
 
 // Component imports
-import PageNavBar from "./components/Navbar";
+import NavBar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ProjectPage from "./pages/ProjectPage";
 import AboutPage from "./pages/AboutPage";
@@ -121,7 +121,7 @@ function App() {
             <Router basename={process.env.PUBLIC_URL}>
               <Switch>
                 <Route exact path="/">
-                  <PageNavBar />
+                  <NavBar />
                 </Route>
                 <Route path="/projects">
                   <ProjectPage />

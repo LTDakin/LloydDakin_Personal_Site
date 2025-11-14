@@ -1,6 +1,15 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
+/**
+ * A title card with optional subtitles
+ *
+ * @typedef {Object} HeroProps
+ * @property {string} title - The main title of the hero section.
+ * @property {string} subtitle - The secondary title of the hero section.
+ * @property {string} subtitle2 - An optional subtitle 2.
+ */
+
 function Hero(props) {
   return (
     <div className="Hero">
