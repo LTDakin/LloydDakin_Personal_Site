@@ -8,7 +8,7 @@ import "./App.css";
 import NavBar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ProjectPage from "./pages/ProjectPage";
-import AboutPage from "./pages/AboutPage";
+import ResumePage from "./pages/ResumePage";
 import ContactPage from "./pages/ContactPage";
 
 // Image imports
@@ -113,8 +113,8 @@ function App() {
                 <Route path="/projects">
                   <ProjectPage />
                 </Route>
-                <Route path="/about">
-                  <AboutPage />
+                <Route path="/resume">
+                  <ResumePage />
                 </Route>
                 <Route path="/contact">
                   <ContactPage />

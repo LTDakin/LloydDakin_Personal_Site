@@ -2,18 +2,17 @@ import React from "react";
 import BackButton from "../components/BackButton";
 import JobDescription from "../components/JobDescription";
 
-function AboutPage(props) {
+function ResumePage(props) {
   return (
     <div className="about-page-div">
-      <div className="page-header">
+      <div className="page-header d-flex justify-content-between">
         <h1
           style={{
             fontFamily: "lemonmilk",
             fontSize: "4rem",
-            marginTop: "5%",
           }}
         >
-          Work Experience
+          Resume
         </h1>
         <BackButton />
       </div>
@@ -75,4 +74,4 @@ function AboutPage(props) {
   );
 }
 
-export default AboutPage;
+export default ResumePage;

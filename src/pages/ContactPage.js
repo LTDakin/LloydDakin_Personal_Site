@@ -30,7 +30,7 @@ function ContactPage(props) {
 
   return (
     <div className="contact-page-div">
-      <div className="page-header">
+      <div className="page-header d-flex justify-content-between">
         <h1 style={{ fontFamily: "coolvetica", fontSize: "4em" }}>
           <img
             style={{

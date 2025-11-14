@@ -11,7 +11,7 @@ function navbar() {
       style={{ height: "100%", justifyContent: "center" }}
     >
       <TitleLink path={"/projects"} buttonText={"Projects"} />
-      <TitleLink path={"/about"} buttonText={"About"} />
+      <TitleLink path={"/resume"} buttonText={"Resume"} />
       <TitleLink path={"/contact"} buttonText={"Contact"} />
     </Nav>
   );

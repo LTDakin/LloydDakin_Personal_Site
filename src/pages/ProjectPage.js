@@ -5,7 +5,7 @@ import ProjectCard from "../components/ProjectCard";
 function ProjectPage(props) {
   return (
     <div className="project-page-div">
-      <div className="page-header">
+      <div className="page-header d-flex justify-content-between">
         <h1 style={{ fontFamily: "coolvetica", fontSize: "4em" }}>
           Projects
         </h1>
