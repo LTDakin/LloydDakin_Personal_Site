@@ -1,8 +1,7 @@
-import React from 'react';
 import BackButton from '../components/BackButton';
 import JobDescription from '../components/JobDescription';
 
-function ResumePage(props) {
+function ResumePage() {
   return (
     <div className="about-page-div">
       <div className="page-header d-flex justify-content-between">
