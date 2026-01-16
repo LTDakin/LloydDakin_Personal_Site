@@ -21,12 +21,9 @@ function App() {
   return (
       <Row
         fluid
-        style={{
-          position: "absolute",
-          height: "100%",
-        }}
+        className="m-0 vh-100 vw-100 overflow-hidden position-absolute"
       >
-        {/* Title, social icons column */}
+        {/* Header and Social Icons */}
         <Col className="align-items-center d-flex m-2">
           <Container>
             <Row>
@@ -38,7 +35,7 @@ function App() {
             </Row>
           </Container>
         </Col>
-        {/* Middle image column */}
+        {/* Middle image */}
         <Col
           className="align-items-center d-flex p-0"
         >
@@ -49,12 +46,12 @@ function App() {
             style={{ objectFit: "cover" }}
           />
         </Col>
-        {/* Page Navigation column */}
+        {/* Sub Page Navigation */}
         <Col
-          className="align-items-center d-flex p-0"
+          className="align-items-center d-flex p-0 vh-100 overflow-auto"
           xl={6}
         >
-          <Container fluid className="p-0 h-100 overflow-auto">
+          <Container className="p-0 h-100">
             <Router basename={process.env.PUBLIC_URL}>
               <Switch>
                 <Route exact path="/">
