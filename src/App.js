@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -20,22 +19,15 @@ import linkedinIcon from "./assets/images/linkedIn.png";
 function App() {
   // page code
   return (
-    <>
       <Row
         fluid
         style={{
-          backgroundColor: "white",
           position: "absolute",
           height: "100%",
-          margin: 0,
         }}
       >
         {/* Title, social icons column */}
-        <Col
-          className="align-items-center d-flex"
-          fluid
-          style={{ paddingLeft: 20, paddingRight: 10, paddingBottom: 10 }}
-        >
+        <Col className="align-items-center d-flex m-2">
           <Container>
             <Row>
               <Hero title={"Lloyd Dakin"} subtitle={"Software Engineer"} />
@@ -48,36 +40,21 @@ function App() {
         </Col>
         {/* Middle image column */}
         <Col
-          className="align-items-center d-flex"
-          style={{ paddingLeft: 0, paddingRight: 0 }}
+          className="align-items-center d-flex p-0"
         >
           <img
             src={nasaImg}
             alt={"forest"}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
+            className="w-100 h-100"
+            style={{ objectFit: "cover" }}
           />
         </Col>
         {/* Page Navigation column */}
         <Col
-          fluid
-          className="align-items-center d-flex"
-          style={{ paddingLeft: 0, paddingRight: 0 }}
+          className="align-items-center d-flex p-0"
           xl={6}
         >
-          <Container
-            id="content-container"
-            fluid
-            style={{
-              paddingLeft: 0,
-              paddingRight: 0,
-              height: "100%",
-              overflow: "auto",
-            }}
-          >
+          <Container fluid className="p-0 h-100 overflow-auto">
             <Router basename={process.env.PUBLIC_URL}>
               <Switch>
                 <Route exact path="/">
@@ -97,7 +74,6 @@ function App() {
           </Container>
         </Col>
       </Row>
-    </>
   );
 }
 
