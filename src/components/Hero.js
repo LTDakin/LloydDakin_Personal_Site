@@ -1,5 +1,5 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React from 'react';
+import { Container } from 'react-bootstrap';
 
 /**
  * A title card with optional subtitles
@@ -17,7 +17,7 @@ function Hero(props) {
         {props.title && (
           <h1
             className="display-1 font-weight-bolder"
-            style={{ fontSize: "8rem", fontFamily: "lemonmilk" }}
+            style={{ fontSize: '8rem', fontFamily: 'lemonmilk' }}
           >
             {props.title}
           </h1>
@@ -25,7 +25,7 @@ function Hero(props) {
         {props.subtitle && (
           <h3
             className="display-7 font-weight-light"
-            style={{ fontSize: "3em" }}
+            style={{ fontSize: '3em' }}
           >
             {props.subtitle}
           </h3>

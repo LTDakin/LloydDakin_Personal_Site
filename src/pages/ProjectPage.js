@@ -1,14 +1,12 @@
-import React from "react";
-import BackButton from "../components/BackButton";
-import ProjectCard from "../components/ProjectCard";
+import React from 'react';
+import BackButton from '../components/BackButton';
+import ProjectCard from '../components/ProjectCard';
 
 function ProjectPage(props) {
   return (
     <div className="project-page-div">
       <div className="page-header d-flex justify-content-between">
-        <h1 style={{ fontFamily: "coolvetica", fontSize: "4em" }}>
-          Projects
-        </h1>
+        <h1 style={{ fontFamily: 'coolvetica', fontSize: '4em' }}>Projects</h1>
         <BackButton />
       </div>
       <div className="project-cards-div-container">

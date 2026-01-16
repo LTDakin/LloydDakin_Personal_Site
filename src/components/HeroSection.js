@@ -1,14 +1,14 @@
-import React from "react";
-import { Jumbotron, Container, Row, Col } from "react-bootstrap";
+import React from 'react';
+import { Jumbotron, Container, Row, Col } from 'react-bootstrap';
 
 function HeroSection(props) {
   const imgStyle = {
-    maxHeight: "100%",
-    maxWidth: "100%",
-    display: "block",
+    maxHeight: '100%',
+    maxWidth: '100%',
+    display: 'block',
   };
   const rowStyle = {
-    height: "500px",
+    height: '500px',
   };
   return (
     <div>
