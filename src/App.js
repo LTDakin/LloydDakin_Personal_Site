@@ -7,6 +7,7 @@ import "./App.css";
 // Component imports
 import NavBar from "./components/Navbar";
 import Hero from "./components/Hero";
+import SocialsIcon from "./components/SocialsIcon";
 import ProjectPage from "./pages/ProjectPage";
 import ResumePage from "./pages/ResumePage";
 import ContactPage from "./pages/ContactPage";
@@ -17,15 +18,9 @@ import githubIcon from "./assets/images/github.png";
 import linkedinIcon from "./assets/images/linkedIn.png";
 
 function App() {
-  // css variables
-  const iconSize = "40px";
-  const iconStyle = {
-    height: iconSize,
-    marginLeft: "20px",
-  };
   // page code
   return (
-    <div className="entire-page">
+    <>
       <Row
         fluid
         style={{
@@ -45,31 +40,9 @@ function App() {
             <Row>
               <Hero title={"Lloyd Dakin"} subtitle={"Software Engineer"} />
             </Row>
-            <Row id="socials-row">
-              <a
-                href="https://github.com/LTDakin?tab=repositories"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  className="social-icon"
-                  src={githubIcon}
-                  alt="github icon"
-                  style={{ height: iconSize, }}
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/lloyd-dakin/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  className="social-icon"
-                  src={linkedinIcon}
-                  alt="linkedin icon"
-                  style={iconStyle}
-                />
-              </a>
+            <Row style={{ gap: "10px" }} id="socials-row">
+              <SocialsIcon href="https://github.com/LTDakin?tab=repositories" src={githubIcon} alt="github icon"/>
+              <SocialsIcon href="https://www.linkedin.com/in/lloyd-dakin/" src={linkedinIcon} alt="linkedin icon"/>
             </Row>
           </Container>
         </Col>
@@ -124,7 +97,7 @@ function App() {
           </Container>
         </Col>
       </Row>
-    </div>
+    </>
   );
 }
 
