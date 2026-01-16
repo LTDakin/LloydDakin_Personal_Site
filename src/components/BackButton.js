@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components"
-import rightArrow from "../assets/images/right arrow.png";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import rightArrow from '../assets/images/right arrow.png';
 
 const Img = styled.img`
   width: 3rem;
@@ -11,16 +11,12 @@ const Img = styled.img`
   &:hover {
     transform: scaleX(-1) scale(1.2);
   }
-`
+`;
 
 function BackButton() {
   return (
-    <Link to={"/"}>
-      <Img
-        className="back-button-img"
-        src={rightArrow}
-        alt="back button"
-      />
+    <Link to={'/'}>
+      <Img className="back-button-img" src={rightArrow} alt="back button" />
     </Link>
   );
 }

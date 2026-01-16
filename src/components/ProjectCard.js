@@ -1,5 +1,5 @@
-import React from "react";
-import githubIcon from "../assets/images/github.png";
+import React from 'react';
+import githubIcon from '../assets/images/github.png';
 function ProjectCard(props) {
   return (
     <div className="project-card-div">

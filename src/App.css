@@ -1,21 +1,21 @@
 @font-face {
-  font-family: "lemonmilk";
-  src: local("LEMONMILK-Regular"), url("./assets/fonts/LEMONMILK-Regular.otf");
+  font-family: 'lemonmilk';
+  src: local('LEMONMILK-Regular'), url('./assets/fonts/LEMONMILK-Regular.otf');
 }
 
 @font-face {
-  font-family: "coolvetica";
-  src: local("coolvetica"), url("./assets/fonts/coolvetica.ttf");
+  font-family: 'coolvetica';
+  src: local('coolvetica'), url('./assets/fonts/coolvetica.ttf');
 }
 
 @font-face {
-  font-family: "cocogoose";
+  font-family: 'cocogoose';
   src:
-    local("Cocogoose\ Pro-trial"),
-    url("./assets/fonts/Cocogoose\ Pro-trial.ttf");
+    local('Cocogoose\ Pro-trial'),
+    url('./assets/fonts/Cocogoose\ Pro-trial.ttf');
 }
 
 @font-face {
-  font-family: "bebas";
-  src: local("BebasNeue-Regular"), url("./assets/fonts/BebasNeue-Regular.ttf");
+  font-family: 'bebas';
+  src: local('BebasNeue-Regular'), url('./assets/fonts/BebasNeue-Regular.ttf');
 }

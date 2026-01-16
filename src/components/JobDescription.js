@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function JobDescription(props) {
   const title = props.title;
@@ -10,7 +10,7 @@ function JobDescription(props) {
   const points = props.points.map((point) => (
     <p className="job-point">{point}</p>
   ));
-  
+
   return (
     <div className="job-description-component">
       <h2 className="job-title">{title}</h2>

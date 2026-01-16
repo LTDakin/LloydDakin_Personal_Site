@@ -1,8 +1,8 @@
-import React from "react";
-import { useRef } from "react";
-import emailjs from "@emailjs/browser";
-import BackButton from "../components/BackButton";
-import emailIcon from "../assets/images/email icon.png";
+import React from 'react';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import BackButton from '../components/BackButton';
+import emailIcon from '../assets/images/email icon.png';
 
 function ContactPage(props) {
   const form = useRef();
@@ -20,7 +20,7 @@ function ContactPage(props) {
       .then(
         (result) => {
           console.log(result.text);
-          document.getElementById("sendButton").value = "Sent!";
+          document.getElementById('sendButton').value = 'Sent!';
         },
         (error) => {
           console.log(error.text);
@@ -31,13 +31,13 @@ function ContactPage(props) {
   return (
     <div className="contact-page-div">
       <div className="page-header d-flex justify-content-between">
-        <h1 style={{ fontFamily: "coolvetica", fontSize: "4em" }}>
+        <h1 style={{ fontFamily: 'coolvetica', fontSize: '4em' }}>
           <img
             style={{
-              display: "inline",
-              height: "70px",
-              marginRight: "20px",
-              paddingBottom: "10px",
+              display: 'inline',
+              height: '70px',
+              marginRight: '20px',
+              paddingBottom: '10px',
             }}
             src={emailIcon}
             alt="emailIcon"

@@ -1,6 +1,6 @@
-import React from "react";
-import BackButton from "../components/BackButton";
-import JobDescription from "../components/JobDescription";
+import React from 'react';
+import BackButton from '../components/BackButton';
+import JobDescription from '../components/JobDescription';
 
 function ResumePage(props) {
   return (
@@ -8,65 +8,58 @@ function ResumePage(props) {
       <div className="page-header d-flex justify-content-between">
         <h1
           style={{
-            fontFamily: "lemonmilk",
-            fontSize: "4rem",
+            fontFamily: 'lemonmilk',
+            fontSize: '4rem',
           }}
         >
           Resume
         </h1>
         <BackButton />
       </div>
-      <div className="work-experience-div" style={{ padding: "30px" }}>
+      <div className="work-experience-div" style={{ padding: '30px' }}>
         <JobDescription
           title="Las Cumbres Observatory - Full Stack Engineer"
-          tech={[
-            "Vue.js",
-            "Django",
-            "Redis",
-            "JavaScript",
-            "Python",
-            "Nix.OS",
-          ]}
+          tech={['Vue.js', 'Django', 'Redis', 'JavaScript', 'Python', 'Nix.OS']}
           points={[
-            "● Architected and built Datalab, a web-based platform using Vue3 and Django, enabling users to execute scientific pipelines and process astronomical data.",
-            "● Optimized a webworker to do image scaling and multiple color channel stacking in real-time in the browser.",
-            "● Acted as a sole product owner, directly engaging with users to translate feedback into agile feature development and automated deployment with a CI/CD pipeline.",
+            '● Architected and built Datalab, a web-based platform using Vue3 and Django, enabling users to execute scientific pipelines and process astronomical data.',
+            '● Optimized a webworker to do image scaling and multiple color channel stacking in real-time in the browser.',
+            '● Acted as a sole product owner, directly engaging with users to translate feedback into agile feature development and automated deployment with a CI/CD pipeline.',
           ]}
         />
         <JobDescription
           title="Avanade - Full Stack Engineer"
           tech={[
-            "Java Spring",
-            ".Net",
-            "React",
-            "Angular",
-            "JavaScript",
-            "C#",
-            "Node.js",
-            "SQL",
+            'Java Spring',
+            '.Net',
+            'React',
+            'Angular',
+            'JavaScript',
+            'C#',
+            'Node.js',
+            'SQL',
           ]}
           points={[
-            "● Led development and testing of a car insurance mobile app, overseeing UI interface creation using Angular, API Restful layer with .Net API, and database schemas using Entity Framework and SQL. Delivering product for the client 1 month ahead of schedule.",
-            "● Upskilled in Java Spring, building a React web application that empowered fellow employees to enhance their skills and contribute to company profitability. Presented the application to a monthly learning meeting reaching 100+ coworkers looking to learn React Spring Applications",
-            "● Solved a client’s problem by leading the re-design and full implementation of a customer-centric account recovery feature, enabling seamless account retrieval through phone numbers. This resulted in a 40% increase in account recovery logins.",
+            '● Led development and testing of a car insurance mobile app, overseeing UI interface creation using Angular, API Restful layer with .Net API, and database schemas using Entity Framework and SQL. Delivering product for the client 1 month ahead of schedule.',
+            '● Upskilled in Java Spring, building a React web application that empowered fellow employees to enhance their skills and contribute to company profitability. Presented the application to a monthly learning meeting reaching 100+ coworkers looking to learn React Spring Applications',
+            '● Solved a client’s problem by leading the re-design and full implementation of a customer-centric account recovery feature, enabling seamless account retrieval through phone numbers. This resulted in a 40% increase in account recovery logins.',
           ]}
         />
         <JobDescription
           title="Ciena - Embedded Network Engineer "
-          tech={["C", "Python", "IP protocols", "Bash", "Linux", "Docker"]}
+          tech={['C', 'Python', 'IP protocols', 'Bash', 'Linux', 'Docker']}
           points={[
-            "● Independently developed a pivotal feature enabling routers to seamlessly transition between protocols by implementing TCP redistribution to BGP routing using the C programming language.",
-            "● Resolved 15+ software bugs in YANG models and bash scripts, improving software reliability. Provided troubleshooting instructions to support the team for efficient issue resolution.",
-            "● Built and deployed virtual routers using proprietary virtual machines for thorough testing of bug fixes and new features, ensuring optimal software quality and reliability.",
+            '● Independently developed a pivotal feature enabling routers to seamlessly transition between protocols by implementing TCP redistribution to BGP routing using the C programming language.',
+            '● Resolved 15+ software bugs in YANG models and bash scripts, improving software reliability. Provided troubleshooting instructions to support the team for efficient issue resolution.',
+            '● Built and deployed virtual routers using proprietary virtual machines for thorough testing of bug fixes and new features, ensuring optimal software quality and reliability.',
           ]}
         />
         <JobDescription
           title="Amazon - Software Development Engineer Intern"
-          tech={["JavaScript", "HTTP", "CSS", "AWS", "React.js", "Bootstrap"]}
+          tech={['JavaScript', 'HTTP', 'CSS', 'AWS', 'React.js', 'Bootstrap']}
           points={[
-            "● Developed an internal analytics tool using React, enabling the team to view ad campaign’s metrics, thus boosting productivity.",
-            "● Developed search bar tooling with React Bootstrap to retrieve data from a lambda instance connected to an RDS database, saving ~1,800+ working hours per month by replacing manual querying of SQL database",
-            "● Built multiple data analysis pages with Chart.js for detailed custom search queries, allowing team members to find specific sets and look at generated statistics including top/lowest performing ads",
+            '● Developed an internal analytics tool using React, enabling the team to view ad campaign’s metrics, thus boosting productivity.',
+            '● Developed search bar tooling with React Bootstrap to retrieve data from a lambda instance connected to an RDS database, saving ~1,800+ working hours per month by replacing manual querying of SQL database',
+            '● Built multiple data analysis pages with Chart.js for detailed custom search queries, allowing team members to find specific sets and look at generated statistics including top/lowest performing ads',
           ]}
         />
       </div>
