@@ -64,22 +64,7 @@ function ContactPage() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
-        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          document.getElementById('sendButton').value = 'Sent!';
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    console.log('Email disabled for now');
   };
 
   return (
