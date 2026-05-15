@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import styled from 'styled-components';
-import emailjs from '@emailjs/browser';
 import BackButton from '../components/BackButton';
 
 const EmailForm = styled.form`
