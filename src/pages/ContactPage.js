@@ -18,7 +18,7 @@ const TextArea = styled.textarea`
   border: black solid 3px;
   min-height: 300px;
   padding: 5px;
-  transition: 0.6s ease-in-out;
+  transition: var(--transition-speed);
 
   &:focus {
     outline: none;
@@ -31,7 +31,7 @@ const Input = styled.input`
   width: 100%;
   border: black solid 3px;
   padding: 5px;
-  transition: 0.6s ease-in-out;
+  transition: var(--transition-speed);
 
   &:focus {
     outline: none;
@@ -49,7 +49,7 @@ const SubmitInput = styled.input`
   padding-left: 60px;
   padding-right: 60px;
   border: black solid 3px;
-  transition: 0.6s ease;
+  transition: var(--transition-speed);
   margin-top: 40px;
 
   &:hover {

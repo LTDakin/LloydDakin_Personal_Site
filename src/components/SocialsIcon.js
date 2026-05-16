@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Img = styled.img`
   height: 40px;
-  transition: 0.6s;
+  transition: var(--transition-speed);
 
   &:hover {
     transform: scale(1.2);
