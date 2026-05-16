@@ -1,3 +1,7 @@
+/* Global CSS Vars */
+:root {
+  --transition-speed: 0.4s ease-in-out;
+}
 /* Shared Page CSS */
 .page-header {
   display: flex;
@@ -10,7 +14,7 @@
 .big-nav-link {
   padding: 0;
   color: black;
-  transition: 0.6s ease;
+  transition: var(--transition-speed);
 }
 
 .big-nav-link span {
@@ -25,7 +29,7 @@
   height: 70px;
   background-image: url('../assets/images/right\ arrow.png');
   filter: brightness(0) invert(1);
-  transition: all 0.6s;
+  transition: all var(--transition-speed);
 }
 
 .big-nav-link:hover {
@@ -54,7 +58,7 @@
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 25px;
-  transition: 0.6s;
+  transition: var(--transition-speed);
 }
 
 .job-tech-item:hover {
@@ -92,7 +96,7 @@
   height: 370px;
   width: 300px;
   padding: 20px;
-  transition: 0.6s;
+  transition: var(--transition-speed);
   border: 5px solid black;
   margin: 20px;
 }
@@ -123,14 +127,14 @@
   position: absolute;
   bottom: 0px;
   right: 40px;
-  transition: 0.6s ease-in-out;
+  transition: var(--transition-speed);
   filter: opacity(0);
 }
 
 .card-github-icon {
   height: 40px;
   filter: invert(0);
-  transition: 0.6s;
+  transition: var(--transition-speed);
   position: absolute;
   bottom: 10px;
   right: 10px;
