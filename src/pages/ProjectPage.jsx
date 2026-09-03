@@ -1,7 +1,7 @@
 import React from 'react';
 import BackButton from '../components/BackButton';
 import ProjectCard from '../components/ProjectCard';
-import projects from '../assets/projects.json';
+import projects from '../assets/files/projects.json';
 
 function ProjectPage(props) {
   const activeProjects = projects.filter(project => project.active);

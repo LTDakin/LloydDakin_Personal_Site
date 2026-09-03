@@ -11,8 +11,8 @@
 @font-face {
   font-family: 'cocogoose';
   src:
-    local('Cocogoose\ Pro-trial'),
-    url('./assets/fonts/Cocogoose\ Pro-trial.ttf');
+    local('Cocogoose-Pro-trial'),
+    url('./assets/fonts/Cocogoose-Pro-trial.ttf');
 }
 
 @font-face {

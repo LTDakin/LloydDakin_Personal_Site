@@ -27,7 +27,7 @@
   left: 0;
   width: 0;
   height: 70px;
-  background-image: url('../assets/images/right\ arrow.png');
+  background-image: url('../assets/images/right-arrow.png');
   filter: brightness(0) invert(1);
   transition: all var(--transition-speed);
 }

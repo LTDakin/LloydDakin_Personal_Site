@@ -7,10 +7,10 @@ Get Started
 ```
 git clone [repo link]
 npm install
-npm run start
+npm run dev
 ```
 
-Pushes to main will start a react build and deploy to gh-pages
+Pushes to main will start a Vite build and deploy to gh-pages
 
 ```
 deploy static content to gh-pages

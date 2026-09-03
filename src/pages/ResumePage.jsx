@@ -1,5 +1,5 @@
 import BackButton from '../components/BackButton';
-import resumePDF from '../assets/full_stack_resume.pdf';
+import resumePDF from '../assets/files/full_stack_resume.pdf';
 
 function ResumePage() {
   return (

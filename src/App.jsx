@@ -55,7 +55,7 @@ function App() {
         xl={6}
       >
         <Container className="p-0 h-100">
-          <Router basename={process.env.PUBLIC_URL}>
+          <Router basename={import.meta.env.BASE_URL}>
             <Switch>
               <Route exact path="/">
                 <NavBar />

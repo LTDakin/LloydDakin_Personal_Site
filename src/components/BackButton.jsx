@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import rightArrow from '../assets/images/right arrow.png';
+import rightArrow from '../assets/images/right-arrow.png';
 
 const Img = styled.img`
   width: 3rem;
