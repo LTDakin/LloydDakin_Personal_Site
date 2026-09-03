@@ -1,0 +1,44 @@
+[
+  {
+    "cardTitle": "Datalab",
+    "projectDescription": "Browser tool for science operations on Astronomy FITs files ensuring research grade accuracy for compute restricted users",
+    "githubLink": "https://github.com/LCOGT/datalab-ui",
+    "active": true
+  },
+  {
+    "cardTitle": "Team Do",
+    "projectDescription": "Personal social media project that allows for personalized accounts to create Todos that you can share with other users. Experiment to try out modern JS frameworks and state/type libraries.",
+    "githubLink": "https://github.com/LTDakin/To-Do-Teams",
+    "active": true
+  },
+  {
+    "cardTitle": "Airpot Landing Guidance",
+    "projectDescription": "Proof of concept that fetches weather & airport runway api, to recommend best takeoff and landing strip for headwinds for any airport in the United States",
+    "githubLink": "https://github.com/LTDakin/AirportWeatherTool",
+    "active": true
+  },
+  {
+    "cardTitle": "Centroid Algorithim",
+    "projectDescription": "A Euclidian clustering algorithim that takes in a list of tuples that represent points in a 2D space. The algorithim then proceeds to group the points using Euclidian distance and assigns centroids to each group. A centroid is the mean middle of all the points in a group",
+    "githubLink": "https://github.com/LTDakin/ClusteringAlgorithim",
+    "active": true
+  },
+  {
+    "cardTitle": "Instagrown",
+    "projectDescription": "A social networking site for plant owners. Complete with account creation and login, profiles, posts, comments, and messages.",
+    "githubLink": "https://github.com/LTDakin/InstaGrown",
+    "active": true
+  },
+  {
+    "cardTitle": "IBM Watson Query Engine",
+    "projectDescription": "This is a NLP program that parses wikipedia articles using Lucene to then be able to answer a file containing questions about historic events, places, and people. First the knowledge base is generated and then you can pass the question text file to recieve answers.",
+    "githubLink": "https://github.com/LTDakin/IBM_Watson_jeopardy_query_engine",
+    "active": true
+  },
+  {
+    "cardTitle": "Example Card",
+    "projectDescription": "This is an example card that is not active.",
+    "githubLink": "",
+    "active": false
+  }
+]
