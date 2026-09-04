@@ -9,7 +9,7 @@ const Img = styled.img`
   }
 `;
 
-function SocialsIcon(props) {
+function IconLink(props) {
   return (
     <a href={props.href} target="_blank" rel="noreferrer">
       <Img
@@ -22,4 +22,4 @@ function SocialsIcon(props) {
   );
 }
 
-export default SocialsIcon;
+export default IconLink;

@@ -1,12 +1,11 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap';
 
 import './App.css';
 
 // Component imports
 import NavBar from './components/Navbar';
-import Hero from './components/Hero';
-import SocialsIcon from './components/SocialsIcon';
+import IconLink from './components/SocialsIcon';
+import GitHeatMap from './components/GitHeatMap';
 import ProjectPage from './pages/ProjectPage';
 import ResumePage from './pages/ResumePage';
 import ContactPage from './pages/ContactPage';
@@ -17,44 +16,47 @@ import githubIcon from './assets/images/github.png';
 import linkedinIcon from './assets/images/linkedIn.png';
 
 function App() {
-  // page code
   return (
-    <Row fluid className="m-0 vh-100 vw-100 overflow-hidden position-absolute">
+    <div className="app-layout">
       {/* Header and Social Icons */}
-      <Col className="align-items-center d-flex m-2">
-        <Container>
-          <Row>
-            <Hero title={'Lloyd Dakin'} subtitle={'Software Engineer'} />
-          </Row>
-          <Row style={{ gap: '10px' }} id="socials-row">
-            <SocialsIcon
-              href="https://github.com/LTDakin?tab=repositories"
-              src={githubIcon}
-              alt="github icon"
-            />
-            <SocialsIcon
-              href="https://www.linkedin.com/in/lloyd-dakin/"
-              src={linkedinIcon}
-              alt="linkedin icon"
-            />
-          </Row>
-        </Container>
-      </Col>
+      <div className="app-grid-cell app-grid-left">
+        <h1
+          className="display-1 font-weight-bolder"
+          style={{ fontSize: '6rem', fontFamily: 'lemonmilk' }}
+        >
+          Lloyd Dakin
+        </h1>
+        <h3 className="display-7 font-weight-light" style={{ fontSize: '3em' }}>
+          Software Engineer
+        </h3>
+        <div className="socials-row">
+          <IconLink
+            href="https://github.com/LTDakin?tab=repositories"
+            src={githubIcon}
+            alt="github icon"
+          />
+          <IconLink
+            href="https://www.linkedin.com/in/lloyd-dakin/"
+            src={linkedinIcon}
+            alt="linkedin icon"
+          />
+        </div>
+      </div>
       {/* Middle image */}
-      <Col className="align-items-center d-flex p-0">
-        <img
-          src={nasaImg}
-          alt={'forest'}
-          className="w-100 h-100"
-          style={{ objectFit: 'cover' }}
+      <div className="app-grid-cell app-grid-middle">
+        <GitHeatMap
+          fallback={
+            <img
+              src={nasaImg}
+              alt={'view of earth from the ISS'}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          }
         />
-      </Col>
+      </div>
       {/* Sub Page Navigation */}
-      <Col
-        className="align-items-center d-flex p-0 vh-100 overflow-auto"
-        xl={6}
-      >
-        <Container className="p-0 h-100">
+      <div className="app-grid-cell app-grid-right">
+        <div className="right-panel-content">
           <Router basename={import.meta.env.BASE_URL}>
             <Switch>
               <Route exact path="/">
@@ -71,9 +73,9 @@ function App() {
               </Route>
             </Switch>
           </Router>
-        </Container>
-      </Col>
-    </Row>
+        </div>
+      </div>
+    </div>
   );
 }
 
