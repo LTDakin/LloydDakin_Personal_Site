@@ -44,15 +44,7 @@ function App() {
       </div>
       {/* Middle image */}
       <div className="app-grid-cell app-grid-middle">
-        <GitHeatMap
-          fallback={
-            <img
-              src={nasaImg}
-              alt={'view of earth from the ISS'}
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            />
-          }
-        />
+        <GitHeatMap backgroundImage={nasaImg} />
       </div>
       {/* Sub Page Navigation */}
       <div className="app-grid-cell app-grid-right">

@@ -5,7 +5,7 @@ import { formatDate } from '../utils/date';
 
 const GITHUB_USERNAME = 'LTDakin';
 
-const GREY_SCALE = ['#e6e8eb', '#7d8690', '#525b66', '#272d36', '#161b22'];
+const OPACITY_SCALE = [0.2, 0.4, 0.6, 0.8, 1];
 
 function buildGrid(calendar) {
   const weekdayColumns = [[], [], [], [], [], [], []];
@@ -16,29 +16,9 @@ function buildGrid(calendar) {
   return weekdayColumns;
 }
 
-function defaultRenderCell(
-  day,
-  colour,
-  isHovered,
-  onMouseEnter,
-  onMouseLeave,
-  cellSize = 28
-) {
-  return (
-    <Cell
-      key={day.date}
-      $size={cellSize}
-      $colour={colour}
-      $hovered={isHovered}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-    />
-  );
-}
-
 // --- Component ---
 
-function GitHeatMap({ renderCell = defaultRenderCell, fallback = null }) {
+function GitHeatMap({ backgroundImage }) {
   const [calendar, setCalendar] = useState([]);
   const [hoveredDay, setHoveredDay] = useState(null);
   const [tooltipPos, setTooltipPos] = useState({ top: 0, left: 0 });
@@ -84,11 +64,11 @@ function GitHeatMap({ renderCell = defaultRenderCell, fallback = null }) {
 
   if (loading)
     return (
-      <Wrapper ref={wrapperRef}>
+      <Wrapper ref={wrapperRef} $bgUrl={backgroundImage}>
         <LoadingText>Loading contributions...</LoadingText>
       </Wrapper>
     );
-  if (error) return fallback;
+  if (error) return <Wrapper ref={wrapperRef} $bgUrl={backgroundImage} />;
 
   const grid = buildGrid(calendar);
 
@@ -104,15 +84,14 @@ function GitHeatMap({ renderCell = defaultRenderCell, fallback = null }) {
     });
   };
 
-  const tooltipText = (() => {
-    if (!hoveredDay) return null;
-    const dateFormatted = formatDate(hoveredDay.date);
-    const count = hoveredDay.count;
-    return `${count} contribution${count !== 1 ? 's' : ''} on ${dateFormatted}`;
-  })();
+  const tooltipText = hoveredDay
+    ? `${hoveredDay.count} contribution${
+        hoveredDay.count !== 1 ? 's' : ''
+      } on ${formatDate(hoveredDay.date)}`
+    : null;
 
   return (
-    <Wrapper ref={wrapperRef}>
+    <Wrapper ref={wrapperRef} $bgUrl={backgroundImage}>
       <GridContainer
         data-grid-wrapper
         $cellSize={gridInfo.cellSize}
@@ -120,16 +99,15 @@ function GitHeatMap({ renderCell = defaultRenderCell, fallback = null }) {
       >
         {grid.map((weekdayCol, ci) => (
           <WeekColumn key={ci} $gap={gridInfo.gap}>
-            {weekdayCol.filter(Boolean).map((day) =>
-              renderCell(
-                day,
-                GREY_SCALE[day.level],
-                hoveredDay?.date === day.date,
-                (e) => handleMouseEnter(day, e),
-                () => setHoveredDay(null),
-                gridInfo.cellSize
-              )
-            )}
+            {weekdayCol.filter(Boolean).map((day) => (
+              <Cell
+                key={day.date}
+                $size={gridInfo.cellSize}
+                $opacity={OPACITY_SCALE[day.level]}
+                onMouseEnter={(e) => handleMouseEnter(day, e)}
+                onMouseLeave={() => setHoveredDay(null)}
+              />
+            ))}
           </WeekColumn>
         ))}
         {hoveredDay && (
@@ -152,6 +130,9 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  background-image: url(${({ $bgUrl }) => $bgUrl});
+  background-size: cover;
+  background-position: center;
 `;
 
 const GridContainer = styled.div`
@@ -171,7 +152,8 @@ const Cell = styled.div`
   width: ${({ $size }) => $size}px;
   height: ${({ $size }) => $size}px;
   border-radius: 15px;
-  background-color: ${(props) => props.$colour};
+  background: white;
+  opacity: ${({ $opacity }) => $opacity};
   cursor: pointer;
 `;
 
