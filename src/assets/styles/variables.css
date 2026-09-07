@@ -11,4 +11,9 @@
   /* typography */
   --text-font: 'coolvetica';
   --header-font: 'lemonmilk';
+
+  /* animation */
+  --s-duration: 0.2s;
+  --m-duration: 0.6s;
+  --l-duration: 1s;
 }

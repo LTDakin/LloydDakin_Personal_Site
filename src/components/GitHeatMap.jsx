@@ -5,9 +5,11 @@ import { formatDate } from '../utils/date';
 
 
 const GITHUB_USERNAME = 'LTDakin';
-
+const CELL_SIZE = 28;
+const GAP = 3;
 const OPACITY_SCALE = [0.2, 0.4, 0.6, 0.8, 1];
 
+// Builds the grid from the calendar data
 function buildGrid(calendar) {
   const weekdayColumns = [[], [], [], [], [], [], []];
   for (const day of calendar) {
@@ -17,14 +19,12 @@ function buildGrid(calendar) {
   return weekdayColumns;
 }
 
-// --- Component ---
-
 function GitHeatMap({ backgroundImage }) {
   const [calendar, setCalendar] = useState([]);
   const [hoveredDay, setHoveredDay] = useState(null);
   const [tooltipPos, setTooltipPos] = useState({ top: 0, left: 0 });
   const [error, setError] = useState(null);
-  const [gridInfo, setGridInfo] = useState({ cellSize: 28, gap: 3 });
+  const [gridInfo, setGridInfo] = useState({ cellSize: CELL_SIZE, gap: GAP });
   const wrapperRef = useRef(null);
 
   // Resize observer to adjust grid size on window resize
@@ -119,7 +119,6 @@ function GitHeatMap({ backgroundImage }) {
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,9 +144,16 @@ const WeekColumn = styled.div`
 const Cell = styled.div`
   width: ${({ $size }) => $size}px;
   height: ${({ $size }) => $size}px;
-  border-radius: 0px;
   background: var(--off-white);
   opacity: ${({ $opacity }) => $opacity};
+  transition:
+    transform var(--m-duration) ease-in-out,
+    background var(--m-duration) ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    background: #539cd4;
+  }
 `;
 
 const Tooltip = styled.div`
@@ -159,7 +165,6 @@ const Tooltip = styled.div`
   font-size: 16px;
   font-family: coolvetica, sans-serif;
   white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   top: ${(props) => props.$top}px;
   left: ${(props) => props.$left}px;
   transform: translate(-50%, -110%);

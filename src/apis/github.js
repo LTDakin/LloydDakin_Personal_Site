@@ -38,12 +38,16 @@ function getStaleCache(username) {
   }
 }
 
+// Fetches Github contributions for the past 2 years since thats all we can fit
 export async function fetchGitHubContributions(username) {
   const cached = getCached(username);
   if (cached) return cached;
 
+  const currentYear = new Date().getFullYear();
+  const lastYear = currentYear - 1;
+
   try {
-    const response = await fetch(`${CONTRIBUTIONS_API_URL}/${username}`);
+    const response = await fetch(`${CONTRIBUTIONS_API_URL}/${username}?y=${currentYear}&y=${lastYear}`);
 
     if (!response.ok) {
       throw new Error(`Contributions API error: ${response.status}`);
@@ -55,7 +59,7 @@ export async function fetchGitHubContributions(username) {
       throw new Error(data.error);
     }
 
-    const calendar = data.contributions.map((day) => ({
+    const calendar = data.contributions.toReversed().map((day) => ({
       date: day.date,
       count: day.count,
       level: day.level,
