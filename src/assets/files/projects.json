@@ -12,7 +12,7 @@
     "active": true
   },
   {
-    "cardTitle": "Airpot Landing Guidance",
+    "cardTitle": "Airport Landing Guidance",
     "projectDescription": "Proof of concept that fetches weather & airport runway api, to recommend best takeoff and landing strip for headwinds for any airport in the United States",
     "githubLink": "https://github.com/LTDakin/AirportWeatherTool",
     "active": true

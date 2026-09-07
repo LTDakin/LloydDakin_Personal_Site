@@ -19,3 +19,46 @@
   font-family: 'bebas';
   src: local('BebasNeue-Regular'), url('./assets/fonts/BebasNeue-Regular.ttf');
 }
+
+/* ── Layout Grid ── */
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.app-grid-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+}
+
+.app-grid-left {
+  flex-direction: column;
+  gap: 10px;
+  padding: 2rem;
+}
+
+.app-grid-middle {
+  padding: 0;
+}
+
+.app-grid-right {
+  padding: 0;
+  overflow-y: auto;
+}
+
+.right-panel-content {
+  width: 100%;
+  height: 100%;
+}
+
+.socials-row {
+  display: flex;
+  gap: 10px;
+}
