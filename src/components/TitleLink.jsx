@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import rightArrow from '../assets/images/right-arrow.png';
 
-import './components.css';
-
 function titleLink(props) {
   return (
     <StyledTitleLink className="nav-link" to={props.path}>
