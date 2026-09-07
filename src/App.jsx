@@ -21,12 +21,19 @@ function App() {
       {/* Header and Social Icons */}
       <div className="app-grid-cell app-grid-left">
         <h1
-          className="display-1 font-weight-bolder"
-          style={{ fontSize: '6rem', fontFamily: 'lemonmilk' }}
+          style={{
+            fontSize: '6rem',
+            fontWeight: 'bolder',
+            fontFamily: 'lemonmilk',
+            margin: '0',
+          }}
         >
           Lloyd Dakin
         </h1>
-        <h3 className="display-7 font-weight-light" style={{ fontSize: '3em' }}>
+        <h3
+          className="hero-subtitle"
+          style={{ fontSize: '3em', fontWeight: '300', margin: '0' }}
+        >
           Software Engineer
         </h3>
         <div className="socials-row">

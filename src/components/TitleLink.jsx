@@ -5,7 +5,7 @@ import rightArrow from '../assets/images/right-arrow.png';
 
 function TitleLink(props) {
   return (
-    <StyledTitleLink className="nav-link" to={props.path}>
+    <StyledTitleLink to={props.path}>
       <img className="arrow" src={rightArrow} />
       <h1>{props.buttonText}</h1>
     </StyledTitleLink>
@@ -16,6 +16,8 @@ const StyledTitleLink = styled(Link)`
   --slide-amount: 24px;
 
   display: flex;
+  flex: 1;
+  text-decoration: none;
   align-items: center;
   justify-content: center;
   color: var(--off-black);

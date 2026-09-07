@@ -1,20 +1,26 @@
 
-import { Nav } from 'react-bootstrap';
+import styled from 'styled-components';
 
 import TitleLink from '../components/TitleLink';
 
 function navbar() {
   return (
-    <Nav
-      fill
-      className="flex-column"
-      style={{ height: '100%', justifyContent: 'center' }}
-    >
+    <StyledNav>
       <TitleLink path={'/projects'} buttonText={'Projects'} />
       <TitleLink path={'/resume'} buttonText={'Resume'} />
       <TitleLink path={'/contact'} buttonText={'Contact'} />
-    </Nav>
+    </StyledNav>
   );
 }
+
+const StyledNav = styled.ul`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
 
 export default navbar;
