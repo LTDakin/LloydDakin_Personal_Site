@@ -1,11 +1,3 @@
-/* Shared Page CSS */
-.page-header {
-  display: flex;
-  margin-top: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
 /* Big Nav Link  Component */
 .big-nav-link {
   padding: 0;

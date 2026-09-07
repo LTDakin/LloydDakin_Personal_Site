@@ -1,22 +1,26 @@
 import React from 'react';
 import BackButton from './BackButton';
+import styled from 'styled-components';
 
 const PageHeader = ({ title }) => {
   return (
-    <>
-      <div className="page-header d-flex justify-content-between">
-        <h1
-          style={{
-            fontFamily: 'coolvetica',
-            fontSize: '4rem',
-          }}
-        >
+    <PageHeaderWrapper>
+      <h1 style={{ fontFamily: 'coolvetica', fontSize: '4rem' }}>
           {title}
         </h1>
         <BackButton />
-      </div>
-    </>
+    </PageHeaderWrapper>
   );
 };
+
+// --- Styled Components ---
+
+const PageHeaderWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+`;
 
 export default PageHeader;
