@@ -1,4 +1,4 @@
-import React from 'react';
+
 import BackButton from './BackButton';
 import styled from 'styled-components';
 

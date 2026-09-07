@@ -1,4 +1,4 @@
-import React from 'react';
+
 import PageHeader from '../components/PageHeader';
 import ProjectCard from '../components/ProjectCard';
 import projects from '../assets/files/projects.json';

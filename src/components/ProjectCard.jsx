@@ -1,4 +1,4 @@
-import React from 'react';
+
 import githubIcon from '../assets/images/github.png';
 import styled from 'styled-components';
 
