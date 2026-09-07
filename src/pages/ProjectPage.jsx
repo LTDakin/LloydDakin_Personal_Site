@@ -1,5 +1,5 @@
 import React from 'react';
-import BackButton from '../components/BackButton';
+import PageHeader from '../components/PageHeader';
 import ProjectCard from '../components/ProjectCard';
 import projects from '../assets/files/projects.json';
 
@@ -8,10 +8,7 @@ function ProjectPage(props) {
 
   return (
     <div className="project-page-div">
-      <div className="page-header d-flex justify-content-between">
-        <h1 style={{ fontFamily: 'coolvetica', fontSize: '4em' }}>Projects</h1>
-        <BackButton />
-      </div>
+      <PageHeader title="Projects" />
       <div className="project-cards-div-container">
         <div className="project-cards-div">
           {activeProjects.map(project => (

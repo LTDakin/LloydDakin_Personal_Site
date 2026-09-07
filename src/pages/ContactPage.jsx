@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import styled from 'styled-components';
-import BackButton from '../components/BackButton';
+import PageHeader from '../components/PageHeader';
 
 const EmailForm = styled.form`
   font-family: coolvetica;
@@ -69,12 +69,7 @@ function ContactPage() {
 
   return (
     <>
-      <div className="page-header d-flex justify-content-between">
-        <h1 style={{ fontFamily: 'coolvetica', fontSize: '4em' }}>
-          Let's connect
-        </h1>
-        <BackButton />
-      </div>
+      <PageHeader title="Let's connect" />
       <EmailForm ref={form} onSubmit={sendEmail}>
         <Label>Name</Label>
         <Input type="text" name="user_name" />
