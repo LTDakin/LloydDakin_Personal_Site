@@ -15,46 +15,46 @@ const Label = styled.label`
 const TextArea = styled.textarea`
   width: 100%;
   height: 40%;
-  border: black solid 3px;
+  border: var(--off-black) solid 3px;
   min-height: 300px;
   padding: 5px;
   transition: var(--transition-speed);
 
   &:focus {
     outline: none;
-    background-color: black;
-    color: white;
+    background-color: var(--off-black);
+    color: var(--off-white);
   }
 `;
 
 const Input = styled.input`
   width: 100%;
-  border: black solid 3px;
+  border: var(--off-black) solid 3px;
   padding: 5px;
   transition: var(--transition-speed);
 
   &:focus {
     outline: none;
-    background-color: black;
-    color: white;
+    background-color: var(--off-black);
+    color: var(--off-white);
   }
 `;
 
 const SubmitInput = styled.input`
-  background-color: black;
-  color: white;
+  background-color: var(--off-black);
+  color: var(--off-white);
   font-size: 2em;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 60px;
   padding-right: 60px;
-  border: black solid 3px;
+  border: var(--off-black) solid 3px;
   transition: var(--transition-speed);
   margin-top: 40px;
 
   &:hover {
-    color: black;
-    background-color: white;
+    color: var(--off-black);
+    background-color: var(--off-white);
   }
 `;
 

@@ -158,7 +158,7 @@ const Cell = styled.div`
 
 const Tooltip = styled.div`
   position: absolute;
-  background: white;
+  background: var(--off-white);
   border: var(--black-border);
   padding: 8px 12px;
   color: var(--off-black);
