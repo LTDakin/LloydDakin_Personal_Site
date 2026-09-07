@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { fetchGitHubContributions } from '../apis/github';
 import { formatDate } from '../utils/date';
 
+
 const GITHUB_USERNAME = 'LTDakin';
 
 const OPACITY_SCALE = [0.2, 0.4, 0.6, 0.8, 1];
@@ -22,11 +23,11 @@ function GitHeatMap({ backgroundImage }) {
   const [calendar, setCalendar] = useState([]);
   const [hoveredDay, setHoveredDay] = useState(null);
   const [tooltipPos, setTooltipPos] = useState({ top: 0, left: 0 });
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [gridInfo, setGridInfo] = useState({ cellSize: 28, gap: 3 });
   const wrapperRef = useRef(null);
 
+  // Resize observer to adjust grid size on window resize
   useEffect(() => {
     const el = wrapperRef.current;
     if (!el) return;
@@ -42,19 +43,18 @@ function GitHeatMap({ backgroundImage }) {
     return () => observer.disconnect();
   }, []);
 
+  // Fetch GitHub contributions on component mount
   useEffect(() => {
     let cancelled = false;
     fetchGitHubContributions(GITHUB_USERNAME)
       .then(({ calendar: cal }) => {
         if (!cancelled) {
           setCalendar(cal);
-          setLoading(false);
         }
       })
       .catch((err) => {
         if (!cancelled) {
           setError(err.message);
-          setLoading(false);
         }
       });
     return () => {
@@ -62,12 +62,6 @@ function GitHeatMap({ backgroundImage }) {
     };
   }, []);
 
-  if (loading)
-    return (
-      <Wrapper ref={wrapperRef} $bgUrl={backgroundImage}>
-        <LoadingText>Loading contributions...</LoadingText>
-      </Wrapper>
-    );
   if (error) return <Wrapper ref={wrapperRef} $bgUrl={backgroundImage} />;
 
   const grid = buildGrid(calendar);
@@ -151,36 +145,24 @@ const WeekColumn = styled.div`
 const Cell = styled.div`
   width: ${({ $size }) => $size}px;
   height: ${({ $size }) => $size}px;
-  border-radius: 15px;
-  background: white;
+  border-radius: 0px;
+  background: var(--off-white);
   opacity: ${({ $opacity }) => $opacity};
-  cursor: pointer;
 `;
 
 const Tooltip = styled.div`
   position: absolute;
-  z-index: 10;
-  background: #1c2128;
-  border: 1px solid #30363d;
-  border-radius: 6px;
+  background: white;
+  border: var(--black-border);
   padding: 8px 12px;
-  color: #e6edf3;
-  font-size: 12px;
-  font-family:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  color: var(--off-black);
+  font-size: 16px;
+  font-family: coolvetica, sans-serif;
   white-space: nowrap;
-  pointer-events: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   top: ${(props) => props.$top}px;
   left: ${(props) => props.$left}px;
   transform: translate(-50%, -110%);
-`;
-
-const LoadingText = styled.div`
-  color: #7d8690;
-  font-family: coolvetica, sans-serif;
-  font-size: 1.5em;
 `;
 
 export default GitHeatMap;
