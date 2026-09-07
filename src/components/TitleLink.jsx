@@ -3,26 +3,34 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import rightArrow from '../assets/images/right-arrow.png';
 
-function titleLink(props) {
+function TitleLink(props) {
   return (
     <StyledTitleLink className="nav-link" to={props.path}>
-      <h1 style={{ fontSize: '7rem', fontFamily: 'coolvetica' }}>
-        {props.buttonText}
-      </h1>
+      <img className="arrow" src={rightArrow} />
+      <h1>{props.buttonText}</h1>
     </StyledTitleLink>
   );
 }
 
 const StyledTitleLink = styled(Link)`
+  --slide-amount: 24px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
   color: var(--off-black);
-  transition: var(--transition-speed);
+  transition: all var(--transition-speed);
 
-  span {
-    z-index: 2;
+  h1 {
+    font-family: var(--text-font);
+    font-size: 7rem;
+    transition: transform var(--transition-speed);
+  }
+
+  img.arrow {
+    margin-right: 10px;
+    filter: invert(1);
+    transition: transform var(--transition-speed);
   }
 
   &:hover {
@@ -30,20 +38,13 @@ const StyledTitleLink = styled(Link)`
     background-color: var(--off-black);
   }
 
-  &:hover:after {
-    width: 10%;
+  &:hover h1 {
+    transform: translateX(calc(-1 * var(--slide-amount)));
   }
 
-  &:after {
-    content: '';
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 70px;
-    background-image: url(${rightArrow});
-    filter: brightness(0) invert(1);
-    transition: all var(--transition-speed);
+  &:hover img.arrow {
+    transform: translateX(calc(-1 * var(--slide-amount)));
   }
 `;
 
-export default titleLink;
+export default TitleLink;
