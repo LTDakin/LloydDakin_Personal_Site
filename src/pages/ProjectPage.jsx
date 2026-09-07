@@ -1,31 +1,35 @@
 import React from 'react';
-import BackButton from '../components/BackButton';
+import PageHeader from '../components/PageHeader';
 import ProjectCard from '../components/ProjectCard';
 import projects from '../assets/files/projects.json';
+import styled from 'styled-components';
 
 function ProjectPage(props) {
   const activeProjects = projects.filter(project => project.active);
 
   return (
     <div className="project-page-div">
-      <div className="page-header d-flex justify-content-between">
-        <h1 style={{ fontFamily: 'coolvetica', fontSize: '4em' }}>Projects</h1>
-        <BackButton />
-      </div>
-      <div className="project-cards-div-container">
-        <div className="project-cards-div">
-          {activeProjects.map(project => (
-            <ProjectCard
-              key={project.cardTitle}
-              cardTitle={project.cardTitle}
-              projectDescription={project.projectDescription}
-              githubLink={project.githubLink}
-            />
-          ))}
-        </div>
-      </div>
+      <PageHeader title="Projects" />
+      <ProjectCardDiv>
+        {activeProjects.map((project) => (
+          <ProjectCard
+            key={project.cardTitle}
+            cardTitle={project.cardTitle}
+            projectDescription={project.projectDescription}
+            githubLink={project.githubLink}
+          />
+        ))}
+      </ProjectCardDiv>
     </div>
   );
 }
+
+const ProjectCardDiv = styled.div`
+  margin-left: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  align-content: space-around;
+`;
 
 export default ProjectPage;

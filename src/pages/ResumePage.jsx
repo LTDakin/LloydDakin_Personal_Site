@@ -1,20 +1,11 @@
-import BackButton from '../components/BackButton';
 import resumePDF from '../assets/files/full_stack_resume.pdf';
+import PageHeader from '../components/PageHeader';
+
 
 function ResumePage() {
   return (
     <div className="about-page-div">
-      <div className="page-header d-flex justify-content-between">
-        <h1
-          style={{
-            fontFamily: 'lemonmilk',
-            fontSize: '4rem',
-          }}
-        >
-          Resume
-        </h1>
-        <BackButton />
-      </div>
+      <PageHeader title="Resume" />
       <div className="work-experience-div" style={{ padding: '30px' }}>
         <object
           data={resumePDF}

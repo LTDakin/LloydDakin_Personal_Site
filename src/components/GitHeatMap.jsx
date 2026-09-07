@@ -147,8 +147,8 @@ const Cell = styled.div`
   background: var(--off-white);
   opacity: ${({ $opacity }) => $opacity};
   transition:
-    transform var(--m-duration) ease-in-out,
-    background var(--m-duration) ease-in-out;
+    transform var(--s-duration) ease-in-out,
+    background var(--s-duration) ease-in-out;
 
   &:hover {
     transform: scale(1.1);
@@ -158,7 +158,7 @@ const Cell = styled.div`
 
 const Tooltip = styled.div`
   position: absolute;
-  background: white;
+  background: var(--off-white);
   border: var(--black-border);
   padding: 8px 12px;
   color: var(--off-black);
