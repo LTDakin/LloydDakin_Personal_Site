@@ -121,8 +121,6 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
   background-image: url(${({ $bgUrl }) => $bgUrl});
   background-size: cover;
   background-position: center;
