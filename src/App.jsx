@@ -4,50 +4,21 @@ import './App.css';
 
 // Component imports
 import NavBar from './components/Navbar';
-import IconLink from './components/SocialsIcon';
 import GitHeatMap from './components/GitHeatMap';
 import ProjectPage from './pages/ProjectPage';
 import ResumePage from './pages/ResumePage';
 import ContactPage from './pages/ContactPage';
+import NamePanel from './components/NamePanel';
 
 // Image imports
 import nasaImg from './assets/images/nasa.jpg';
-import githubIcon from './assets/images/github.png';
-import linkedinIcon from './assets/images/linkedIn.png';
 
 function App() {
   return (
     <div className="app-layout">
       {/* Header and Social Icons */}
       <div className="app-grid-cell app-grid-left">
-        <h1
-          style={{
-            fontSize: '6rem',
-            fontWeight: 'bolder',
-            fontFamily: 'lemonmilk',
-            margin: '0',
-          }}
-        >
-          Lloyd Dakin
-        </h1>
-        <h3
-          className="hero-subtitle"
-          style={{ fontSize: '3em', fontWeight: '300', margin: '0' }}
-        >
-          Software Engineer
-        </h3>
-        <div className="socials-row">
-          <IconLink
-            href="https://github.com/LTDakin?tab=repositories"
-            src={githubIcon}
-            alt="github icon"
-          />
-          <IconLink
-            href="https://www.linkedin.com/in/lloyd-dakin/"
-            src={linkedinIcon}
-            alt="linkedin icon"
-          />
-        </div>
+        <NamePanel />
       </div>
       {/* Middle image */}
       <div className="app-grid-cell app-grid-middle">

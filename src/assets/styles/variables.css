@@ -6,6 +6,8 @@
 
   /* spacing/borders */
   --base-padding: 16px;
+  --base-margin: 10px;
+  --base-gap: 10px;
   --black-border: 4px solid var(--off-black);
 
   /* typography */
