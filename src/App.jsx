@@ -11,7 +11,7 @@ import ContactPage from './pages/ContactPage';
 import NamePanel from './components/NamePanel';
 
 // Image imports
-import nasaImg from './assets/images/nasa.jpg';
+import nasaImg from './assets/images/nasa.webp';
 
 function App() {
   return (
