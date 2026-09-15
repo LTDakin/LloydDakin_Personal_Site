@@ -83,7 +83,6 @@ const MainLayout = styled.div`
   .app-grid-left {
     grid-area: left;
     flex-direction: column;
-    padding: 2rem;
   }
 
   .app-grid-middle {

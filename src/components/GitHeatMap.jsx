@@ -121,6 +121,7 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   overflow-y: auto;
+  overflow-x: hidden;
   box-sizing: border-box;
   background-image: url(${({ $bgUrl }) => $bgUrl});
   background-size: cover;
@@ -158,9 +159,9 @@ const Cell = styled.div`
 
 const Tooltip = styled.div`
   position: absolute;
-  background: var(--off-black);
+  background: var(--off-white);
   padding: 8px 12px;
-  color: var(--off-white);
+  color: var(--off-black);
   font-size: 16px;
   font-family: coolvetica, sans-serif;
   white-space: nowrap;

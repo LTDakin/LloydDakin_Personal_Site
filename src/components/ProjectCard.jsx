@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 function ProjectCard(props) {
   return (
-    <ProjectCardDiv>
-      <h2 style={{ fontSize: '2em' }}>{props.cardTitle}</h2>
+    <ProjectCardWrapper>
+      <h2>{props.cardTitle}</h2>
       <p>{props.projectDescription}</p>
       <GithubLink
         target="_blank"
@@ -13,9 +13,9 @@ function ProjectCard(props) {
         href={props.githubLink}
       >
         <CardGithubIcon alt="github" src={githubIcon}></CardGithubIcon>
-        <CardIconText>View on Github</CardIconText>
+        <p>View on Github</p>
       </GithubLink>
-    </ProjectCardDiv>
+    </ProjectCardWrapper>
   );
 }
 
@@ -29,42 +29,46 @@ const CardGithubIcon = styled.img`
   z-index: 2;
 `;
 
-const CardIconText = styled.p`
-  font-size: 1em;
-  color: var(--off-white);
-  text-decoration: none;
-  position: absolute;
-  bottom: 0px;
-  right: 40px;
-  transition: var(--transition-speed);
-  filter: opacity(0);
-`;
-
 const GithubLink = styled.a`
+  p {
+    font-size: 1em;
+    color: var(--off-white);
+    text-decoration: none;
+    position: absolute;
+    bottom: 0px;
+    right: 40px;
+    transition: var(--transition-speed);
+    filter: opacity(0);
+  }
+
   &:hover {
     & ${CardGithubIcon} {
       transform: scale(1.2);
     }
 
-    & ${CardIconText} {
+    & p {
       right: 60px;
       filter: opacity(1);
     }
   }
 `;
 
-const ProjectCardDiv = styled.div`
+const ProjectCardWrapper = styled.div`
   position: relative;
   color: var(--off-black);
   background-color: var(--off-white);
   display: flexbox;
   height: 370px;
-  width: 300px;
+  width: 250px;
   padding: 20px;
   transition: var(--transition-speed);
   border: 5px solid var(--off-black);
   margin: 20px;
   font-family: coolvetica;
+
+  h2 {
+    font-size: 2rem;
+  }
 
   &:hover {
     color: var(--off-white);

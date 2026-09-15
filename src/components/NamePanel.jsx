@@ -6,7 +6,7 @@ import IconLink from './SocialsIcon';
 
 function NamePanel() {
   return (
-    <NamePanelContainer>
+    <NamePanelWrapper>
       <h1>Lloyd Dakin</h1>
       <h3>Software Engineer</h3>
       <SocialsRow>
@@ -21,25 +21,29 @@ function NamePanel() {
           alt="linkedin icon"
         />
       </SocialsRow>
-    </NamePanelContainer>
+    </NamePanelWrapper>
   );
 }
 
-const NamePanelContainer = styled.div`
+const NamePanelWrapper = styled.div`
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
   justify-content: left;
+  align-content: center;
+  padding-left: 20px;
+  font-family: 'LemonMilk';
+  font-weight: bolder;
+  color: var(--off-white);
+  background-color: var(--off-black);
 
   h1 {
     font-size: clamp(1.5rem, 6vw, 6rem);
-    font-weight: bolder;
-    font-family: 'LemonMilk';
     margin: 0;
   }
 
   h3 {
     fontsize: clamp(1.5rem, 2vw, 3rem);
-    font-weight: 300;
-    font-family: 'LemonMilk';
-    margin: 0;
   }
 `;
 

@@ -4,11 +4,11 @@ import ProjectCard from '../components/ProjectCard';
 import projects from '../assets/files/projects.json';
 import styled from 'styled-components';
 
-function ProjectPage(props) {
+const ProjectPage = () => {
   const activeProjects = projects.filter(project => project.active);
 
   return (
-    <div className="project-page-div">
+    <div>
       <PageHeader title="Projects" />
       <ProjectCardDiv>
         {activeProjects.map((project) => (
