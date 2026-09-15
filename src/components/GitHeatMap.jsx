@@ -67,15 +67,8 @@ function GitHeatMap({ backgroundImage }) {
   const grid = buildGrid(calendar);
 
   const handleMouseEnter = (day, e) => {
-    const rect = e.target.getBoundingClientRect();
-    const parentRect = e.target
-      .closest('[data-grid-wrapper]')
-      .getBoundingClientRect();
     setHoveredDay(day);
-    setTooltipPos({
-      top: rect.top - parentRect.top,
-      left: rect.left - parentRect.left + rect.width / 2,
-    });
+    setTooltipPos({ top: e.clientY, left: e.clientX });
   };
 
   const tooltipText = hoveredDay
@@ -87,7 +80,6 @@ function GitHeatMap({ backgroundImage }) {
   return (
     <Wrapper ref={wrapperRef} $bgUrl={backgroundImage}>
       <GridContainer
-        data-grid-wrapper
         $cellSize={gridInfo.cellSize}
         $gap={gridInfo.gap}
       >
@@ -99,7 +91,7 @@ function GitHeatMap({ backgroundImage }) {
                 $size={gridInfo.cellSize}
                 $opacity={OPACITY_SCALE[day.level]}
                 onMouseEnter={(e) => handleMouseEnter(day, e)}
-                onMouseLeave={() => setHoveredDay(null)}
+                onMouseLeave={(e) => handleMouseEnter(null, e)}
               />
             ))}
           </WeekColumn>
@@ -158,7 +150,9 @@ const Cell = styled.div`
 `;
 
 const Tooltip = styled.div`
-  position: absolute;
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
   background: var(--off-white);
   padding: 8px 12px;
   color: var(--off-black);
@@ -167,7 +161,7 @@ const Tooltip = styled.div`
   white-space: nowrap;
   top: ${(props) => props.$top}px;
   left: ${(props) => props.$left}px;
-  transform: translate(-50%, -110%);
+  transform: translate(8px, -100%);
 `;
 
 export default GitHeatMap;
