@@ -120,8 +120,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow-y: auto;
   box-sizing: border-box;
   background-image: url(${({ $bgUrl }) => $bgUrl});
   background-size: cover;
@@ -129,6 +128,7 @@ const Wrapper = styled.div`
 `;
 
 const GridContainer = styled.div`
+  margin: auto;
   position: relative;
   display: grid;
   grid-template-columns: repeat(7, ${({ $cellSize }) => $cellSize}px);

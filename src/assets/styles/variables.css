@@ -4,6 +4,10 @@
   --off-white: #f5f5f5;
   --off-black: #1c1c1c;
 
+  /* breakpoints */
+  --bp-tablet: 1300px;
+  --bp-mobile: 850px;
+
   /* spacing/borders */
   --base-padding: 16px;
   --base-margin: 10px;

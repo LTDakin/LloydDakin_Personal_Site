@@ -25,7 +25,7 @@ const StyledTitleLink = styled(Link)`
 
   h1 {
     font-family: var(--text-font);
-    font-size: clamp(3rem, 6vw, 8rem);
+    font-size: clamp(5rem, 6vw, 8rem);
     transition: transform var(--transition-speed);
   }
 
