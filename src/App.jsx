@@ -1,59 +1,30 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
+import styled from 'styled-components';
 import './App.css';
 
 // Component imports
 import NavBar from './components/Navbar';
-import IconLink from './components/SocialsIcon';
 import GitHeatMap from './components/GitHeatMap';
 import ProjectPage from './pages/ProjectPage';
 import ResumePage from './pages/ResumePage';
 import ContactPage from './pages/ContactPage';
+import NamePanel from './components/NamePanel';
 
 // Image imports
 import nasaImg from './assets/images/nasa.jpg';
-import githubIcon from './assets/images/github.png';
-import linkedinIcon from './assets/images/linkedIn.png';
 
 function App() {
   return (
-    <div className="app-layout">
-      {/* Header and Social Icons */}
+    <MainLayout>
+      {/* Left Header and socials */}
       <div className="app-grid-cell app-grid-left">
-        <h1
-          style={{
-            fontSize: '6rem',
-            fontWeight: 'bolder',
-            fontFamily: 'lemonmilk',
-            margin: '0',
-          }}
-        >
-          Lloyd Dakin
-        </h1>
-        <h3
-          className="hero-subtitle"
-          style={{ fontSize: '3em', fontWeight: '300', margin: '0' }}
-        >
-          Software Engineer
-        </h3>
-        <div className="socials-row">
-          <IconLink
-            href="https://github.com/LTDakin?tab=repositories"
-            src={githubIcon}
-            alt="github icon"
-          />
-          <IconLink
-            href="https://www.linkedin.com/in/lloyd-dakin/"
-            src={linkedinIcon}
-            alt="linkedin icon"
-          />
-        </div>
+        <NamePanel />
       </div>
-      {/* Middle image */}
+      {/* Middle githeatmap and image */}
       <div className="app-grid-cell app-grid-middle">
         <GitHeatMap backgroundImage={nasaImg} />
       </div>
-      {/* Sub Page Navigation */}
+      {/* Right Sub Pages Navigation */}
       <div className="app-grid-cell app-grid-right">
         <div className="right-panel-content">
           <Router basename={import.meta.env.BASE_URL}>
@@ -74,8 +45,62 @@ function App() {
           </Router>
         </div>
       </div>
-    </div>
+    </MainLayout>
   );
 }
+
+const BP_MOBILE = '850px';
+const BP_TABLET = '1300px';
+
+const MainLayout = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-areas: 'left middle right';
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  @media (max-width: ${BP_TABLET}) {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'left right' 'middle right';
+  }
+
+  @media (max-width: ${BP_MOBILE}) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 'left middle' 'right right';
+  }
+
+  .app-grid-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .app-grid-left {
+    grid-area: left;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .app-grid-middle {
+    grid-area: middle;
+    padding: 0;
+  }
+
+  .app-grid-right {
+    grid-area: right;
+    padding: 0;
+    overflow-y: auto;
+  }
+
+  .right-panel-content {
+    width: 100%;
+    height: 100%;
+  }
+`;
 
 export default App;
