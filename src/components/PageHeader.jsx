@@ -16,7 +16,7 @@ const PageHeader = ({ title }) => {
     >
       <PageHeaderWrapper>
         <Title $isHidden={isHovered}>{title}</Title>
-        <BackText $isHidden={!isHovered}>Go Back</BackText>
+        <Title $isHidden={!isHovered}>Go Back</Title>
         <LeftArrow src={rightArrow} alt="back button" />
       </PageHeaderWrapper>
     </StyledLink>
@@ -29,22 +29,17 @@ const StyledLink = styled(Link)`
 `;
 
 const Title = styled.h1`
+  position: absolute;
   font-family: var(--text-font);
   font-size: 4rem;
   margin: 0;
-  transition: var(--transition-speed);
-  display: ${(props) => (props.$isHidden ? 'none' : 'block')};
+  visibility: ${(props) => (props.$isHidden ? 'hidden' : 'visible')};
+  pointer-events: none;
 `;
 
-const BackText = styled.h1`
-  font-family: var(--text-font);
-  font-size: 4rem;
-  margin: 0;
-  transition: var(--transition-speed);
-  display: ${(props) => (props.$isHidden ? 'none' : 'block')};
-`;
-
+// set the color background so that it doesn't invert to a pure black
 const PageHeaderWrapper = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin: var(--base-margin);
@@ -53,16 +48,17 @@ const PageHeaderWrapper = styled.div`
 
   &:hover {
     filter: invert(1);
-    background-color: var(--off-white);
+    background-color: var(--grey);
   }
 `;
 
 const LeftArrow = styled.img`
   transition: var(--transition-speed);
   transform: scaleX(-1) scale(0.8);
+  margin-left: auto;
 
   ${PageHeaderWrapper}:hover & {
-    transform: scaleX(-1) scale(1);
+    transform: scaleX(-1) scale(0.8) translateX(20%);
   }
 `;
 
