@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
 
@@ -27,21 +27,13 @@ function App() {
       {/* Right Sub Pages Navigation */}
       <div className="app-grid-cell app-grid-right">
         <div className="right-panel-content">
-          <Router basename={import.meta.env.BASE_URL}>
-            <Switch>
-              <Route exact path="/">
-                <NavBar />
-              </Route>
-              <Route path="/projects">
-                <ProjectPage />
-              </Route>
-              <Route path="/resume">
-                <ResumePage />
-              </Route>
-              <Route path="/contact">
-                <ContactPage />
-              </Route>
-            </Switch>
+          <Router>
+            <Routes>
+              <Route path="/" element={<NavBar />} />
+              <Route path="/projects" element={<ProjectPage />} />
+              <Route path="/resume" element={<ResumePage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
           </Router>
         </div>
       </div>
