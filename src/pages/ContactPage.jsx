@@ -1,27 +1,46 @@
 import styled from 'styled-components';
 import PageHeader from '../components/PageHeader';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function ContactPage() {
+  const [isSent, setIsSent] = useState(false);
+  const formRef = useRef()
+
   function sendEmail(e) {
     e.preventDefault();
-    console.log('Email disabled for now');
-  };
+    emailjs
+      .sendForm('portfolio_email_ltd', 'template_suf510p', formRef.current, {
+        publicKey: '5l7cVpttvJdNUjFKg',
+      })
+      .then(
+        () => {
+          setIsSent(true);
+        },
+        (error) => {
+          // silently fail
+          console.log('FAILED...', error.text);
+          setIsSent(true);
+        }
+      );
+  }
 
   return (
     <>
       <PageHeader title="Let's connect" />
-      <EmailForm onSubmit={sendEmail}>
-        <label>Name</label>
-        <Input type="text" name="user_name" />
-        <label>Email</label>
-        <Input type="email" name="user_email" />
-        <label>Message</label>
-        <TextArea name="message" />
+      <EmailForm ref={formRef} onSubmit={sendEmail}>
+        <label for="name">Name</label>
+        <Input type="text" id="name" name="user_name" />
+        <label for="email">Email</label>
+        <Input type="email" id="email" name="user_email" />
+        <label for="msg">Message</label>
+        <TextArea name="message" id="msg" />
         <SubmitButton
           id="sendButton"
           className="form-submit-button"
           type="submit"
-          value="Send"
+          value={isSent ? 'Sent!' : 'Send'}
+          disabled={isSent}
         />
       </EmailForm>
     </>
@@ -29,21 +48,21 @@ function ContactPage() {
 }
 
 const EmailForm = styled.form`
-  font-family: coolvetica;
-  padding: 40px;
+  font-family: var(--text-font);
+  padding: var(--large-padding);
   padding-top: var(--base-padding);
 
   label {
     font-size: 2em;
-    margin-top: 20px;
   }
 `;
 
 const Input = styled.input`
-  width: 100%;
-  border: var(--off-black) solid 3px;
-  padding: 5px;
+  width: 90%;
+  border: var(--black-border);
+  padding: var(--base-padding);
   margin-bottom: var(--base-margin);
+  margin-top: var(--base-margin);
   transition: var(--transition-speed);
 
   &:focus {
@@ -60,15 +79,21 @@ const TextArea = styled(Input).attrs({ as: 'textarea' })`
 
 const SubmitButton = styled(Input)`
   width: auto;
-  background-color: var(--off-black);
-  color: var(--off-white);
+  background-color: var(--off-white);
+  color: var(--off-black);
   font-size: 2em;
   font-weight: bolder;
   padding: 10px 60px;
 
-  &:hover {
-    color: var(--off-black);
-    background-color: var(--off-white);
+  @media (hover: hover) {
+    &:hover {
+      color: var(--off-white);
+      background-color: var(--off-black);
+    }
+  }
+
+  &:active {
+    border: var(--white-border);
   }
 `;
 
