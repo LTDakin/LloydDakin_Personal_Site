@@ -1,20 +1,34 @@
 import styled from 'styled-components';
 import PageHeader from '../components/PageHeader';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 function ContactPage() {
   const [isSent, setIsSent] = useState(false);
+  const formRef = useRef()
 
   function sendEmail(e) {
     e.preventDefault();
-    setIsSent(true)
-    console.log('Email disabled for now');
-  };
+    emailjs
+      .sendForm('portfolio_email_ltd', 'template_suf510p', formRef.current, {
+        publicKey: '5l7cVpttvJdNUjFKg',
+      })
+      .then(
+        () => {
+          setIsSent(true);
+        },
+        (error) => {
+          // silently fail
+          console.log('FAILED...', error.text);
+          setIsSent(true);
+        }
+      );
+  }
 
   return (
     <>
       <PageHeader title="Let's connect" />
-      <EmailForm onSubmit={sendEmail}>
+      <EmailForm ref={formRef} onSubmit={sendEmail}>
         <label for="name">Name</label>
         <Input type="text" id="name" name="user_name" />
         <label for="email">Email</label>
