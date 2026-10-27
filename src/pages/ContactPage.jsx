@@ -30,11 +30,11 @@ function ContactPage() {
       <PageHeader title="Let's connect" />
       <EmailForm ref={formRef} onSubmit={sendEmail}>
         <label for="name">Name</label>
-        <Input type="text" id="name" name="user_name" />
+        <Input type="text" id="name" name="user_name" required />
         <label for="email">Email</label>
-        <Input type="email" id="email" name="user_email" />
+        <Input type="email" id="email" name="user_email" required />
         <label for="msg">Message</label>
-        <TextArea name="message" id="msg" />
+        <TextArea name="message" id="msg" required />
         <SubmitButton
           id="sendButton"
           className="form-submit-button"
