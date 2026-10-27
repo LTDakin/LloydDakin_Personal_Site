@@ -29,21 +29,21 @@ function ContactPage() {
 }
 
 const EmailForm = styled.form`
-  font-family: coolvetica;
-  padding: 40px;
+  font-family: var(--text-font);
+  padding: var(--large-padding);
   padding-top: var(--base-padding);
 
   label {
     font-size: 2em;
-    margin-top: 20px;
   }
 `;
 
 const Input = styled.input`
-  width: 100%;
-  border: var(--off-black) solid 3px;
-  padding: 5px;
+  width: 90%;
+  border: var(--black-border);
+  padding: var(--base-padding);
   margin-bottom: var(--base-margin);
+  margin-top: var(--base-margin);
   transition: var(--transition-speed);
 
   &:focus {
@@ -60,15 +60,15 @@ const TextArea = styled(Input).attrs({ as: 'textarea' })`
 
 const SubmitButton = styled(Input)`
   width: auto;
-  background-color: var(--off-black);
-  color: var(--off-white);
+  background-color: var(--off-white);
+  color: var(--off-black);
   font-size: 2em;
   font-weight: bolder;
   padding: 10px 60px;
 
   &:hover {
-    color: var(--off-black);
-    background-color: var(--off-white);
+    color: var(--off-white);
+    background-color: var(--off-black);
   }
 `;
 
