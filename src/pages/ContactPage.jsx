@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 import PageHeader from '../components/PageHeader';
+import { useState } from 'react';
 
 function ContactPage() {
+  const [isSent, setIsSent] = useState(false);
+
   function sendEmail(e) {
     e.preventDefault();
+    setIsSent(true)
     console.log('Email disabled for now');
   };
 
@@ -21,7 +25,8 @@ function ContactPage() {
           id="sendButton"
           className="form-submit-button"
           type="submit"
-          value="Send"
+          value={isSent ? 'Sent!' : 'Send'}
+          disabled={isSent}
         />
       </EmailForm>
     </>
@@ -66,9 +71,15 @@ const SubmitButton = styled(Input)`
   font-weight: bolder;
   padding: 10px 60px;
 
-  &:hover {
-    color: var(--off-white);
-    background-color: var(--off-black);
+  @media (hover: hover) {
+    &:hover {
+      color: var(--off-white);
+      background-color: var(--off-black);
+    }
+  }
+
+  &:active {
+    border: var(--white-border);
   }
 `;
 
