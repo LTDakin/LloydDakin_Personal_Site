@@ -11,12 +11,12 @@ function ContactPage() {
     <>
       <PageHeader title="Let's connect" />
       <EmailForm onSubmit={sendEmail}>
-        <label>Name</label>
-        <Input type="text" name="user_name" />
-        <label>Email</label>
-        <Input type="email" name="user_email" />
-        <label>Message</label>
-        <TextArea name="message" />
+        <label for="name">Name</label>
+        <Input type="text" id="name" name="user_name" />
+        <label for="email">Email</label>
+        <Input type="email" id="email" name="user_email" />
+        <label for="msg">Message</label>
+        <TextArea name="message" id="msg" />
         <SubmitButton
           id="sendButton"
           className="form-submit-button"
